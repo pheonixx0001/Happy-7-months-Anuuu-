@@ -4,18 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#ff8fbe">
-<title>For Anu ♡ — Seven Months</title>
+<title>For Anu ♡ — Seven Months Anniversary</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap');
 
 :root{
-  --pink:#ff7eb6;--hot:#ff4f9a;--rose:#e94f91;--deep:#5c2447;--cream:#fff8fc;
-  --card:rgba(255,255,255,.78);--line:rgba(137,45,91,.13);--shadow:0 22px 60px rgba(156,48,101,.16);
+  --pink:#ff7eb6;
+  --hot:#ff4f9a;
+  --rose:#e94f91;
+  --deep:#5c2447;
+  --cream:#fff8fc;
+  --card:rgba(255,255,255,.78);
+  --line:rgba(137,45,91,.13);
+  --shadow:0 22px 60px rgba(156,48,101,.16);
 }
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+
 body{
- margin:0;color:var(--deep);font-family:"DM Sans",sans-serif;
+ margin:0;
+ color:var(--deep);
+ font-family:"DM Sans",sans-serif;
  background:
  radial-gradient(circle at 10% 10%,rgba(255,255,255,.95) 0 2px,transparent 3px),
  radial-gradient(circle at 80% 25%,rgba(255,255,255,.7) 0 2px,transparent 3px),
@@ -23,349 +34,2462 @@ body{
  background-size:180px 180px,240px 240px,100% 100%;
  overflow-x:hidden;
 }
+
 button,input{font:inherit}
 a{color:inherit;text-decoration:none}
-::selection{background:#ff8fbe;color:white}
 
-/* ambient */
-#ambient{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
-.spark{position:absolute;font-size:14px;opacity:.45;animation:float 7s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0) rotate(0);opacity:.2}50%{transform:translateY(-35px) rotate(12deg);opacity:.7}}
-.petals{position:absolute;width:9px;height:14px;border-radius:80% 20% 80% 20%;background:#ff91bd;opacity:.35;animation:fall 9s linear infinite}
-@keyframes fall{0%{transform:translateY(-10vh) rotate(0)}100%{transform:translateY(115vh) rotate(360deg)}}
-
-/* nav */
-.topbar{position:fixed;top:0;left:0;right:0;height:64px;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:8px 18px;background:rgba(255,246,251,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-.brand{font-family:Caveat;font-size:27px;font-weight:700;color:#b93673}
-.navlinks{display:flex;gap:7px;overflow:auto;scrollbar-width:none}.navlinks::-webkit-scrollbar{display:none}
-.navlinks a{white-space:nowrap;padding:9px 13px;border-radius:999px;font-size:12px;font-weight:700}
-.navlinks a:hover,.navlinks a.active{background:#ff76ad;color:#fff;box-shadow:0 7px 18px #ff76ad45}
-.progress{position:fixed;top:63px;left:0;height:3px;width:0;background:linear-gradient(90deg,#ff4f9a,#ffc1da);z-index:51}
-
-/* sections */
-main{position:relative;z-index:2}
-section{min-height:100vh;padding:105px 20px 90px;display:flex;align-items:center;justify-content:center}
-.wrap{width:min(1100px,100%)}
-.kicker{font-size:12px;text-transform:uppercase;letter-spacing:3px;font-weight:800;color:#cf4b83;margin-bottom:10px}
-h1,h2,h3{margin:0}h1{font-family:Caveat;font-size:clamp(58px,9vw,110px);line-height:.85;color:#8c285a}
-h2{font-family:Caveat;font-size:clamp(45px,6vw,75px);color:#8c285a}
-p{line-height:1.75}
-.sub{max-width:650px;font-size:16px;color:#75415d}
-
-/* hero */
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
-.hero-copy{animation:rise .9s ease both}
-@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
-.badge{display:inline-flex;gap:7px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 13px;box-shadow:0 10px 25px #b53e7410;font-size:12px;font-weight:800;margin-bottom:20px}
-.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
-.btn{border:0;border-radius:18px;padding:13px 18px;cursor:pointer;font-weight:800;color:#fff;background:linear-gradient(135deg,#ff6ca9,#e94f91);box-shadow:0 12px 25px #e94f9140;transition:.2s}
-.btn:hover{transform:translateY(-3px) scale(1.02)}
-.btn.alt{color:#a43a6b;background:#fff;box-shadow:0 10px 24px #b53e7415}
-.hero-note{font-family:Caveat;font-size:24px;color:#bd4c7e;margin-top:24px}
-
-/* anime kitten stage */
-.kitty-stage{height:470px;position:relative;border-radius:40px;background:linear-gradient(160deg,#fff8fcaa,#ffd5e8cc);border:1px solid #fff;box-shadow:var(--shadow);overflow:hidden}
-.moon{position:absolute;right:55px;top:35px;width:75px;height:75px;border-radius:50%;background:#fff6b9;box-shadow:0 0 40px #fff1a6}
-.cloud{position:absolute;background:#fff;border-radius:999px;opacity:.65}
-.cloud.one{width:100px;height:25px;left:25px;top:80px}.cloud.two{width:120px;height:30px;right:20px;top:130px}
-.floor{position:absolute;left:0;right:0;bottom:0;height:100px;background:#ffd0e3;border-top:2px solid #fff}
-.kitty{position:absolute;width:190px;height:205px;left:50%;top:52%;transform:translate(-50%,-50%);filter:drop-shadow(0 16px 10px #a83c6d18);animation:bounce 2.7s ease-in-out infinite}
-@keyframes bounce{0%,100%{transform:translate(-50%,-50%) translateY(0)}50%{transform:translate(-50%,-50%) translateY(-13px)}}
-.ear{position:absolute;width:60px;height:72px;background:#fff7fb;border:5px solid #8c5270;top:0;z-index:0}.ear:after{content:"";position:absolute;inset:12px;background:#ffabc9;clip-path:polygon(50% 0,100% 100%,0 100%)}
-.ear.l{left:15px;transform:rotate(-27deg);border-radius:45% 55% 20% 50%}.ear.r{right:15px;transform:rotate(27deg);border-radius:55% 45% 50% 20%}
-.head{position:absolute;left:15px;right:15px;top:30px;height:120px;background:#fff7fb;border:5px solid #8c5270;border-radius:48% 48% 45% 45%;z-index:2}
-.face{position:absolute;inset:0}
-.eye{position:absolute;top:52px;width:14px;height:20px;border-radius:50%;background:#5c3550}.eye:after{content:"";position:absolute;width:5px;height:7px;background:#fff;border-radius:50%;left:3px;top:3px}
-.eye.l{left:49px}.eye.r{right:49px}
-.blush{position:absolute;top:78px;width:30px;height:13px;border-radius:50%;background:#ff9fc1aa}.blush.l{left:17px}.blush.r{right:17px}
-.nose{position:absolute;top:76px;left:50%;width:10px;height:8px;background:#f47da9;transform:translateX(-50%) rotate(45deg);border-radius:70% 0 70% 0}
-.mouth{position:absolute;top:88px;left:50%;width:24px;height:12px;border-bottom:3px solid #8c5270;border-radius:50%;transform:translateX(-50%)}
-.body{position:absolute;top:128px;left:42px;right:42px;height:75px;background:#ff8fba;border:5px solid #8c5270;border-radius:45% 45% 30% 30%;z-index:1}
-.belly{position:absolute;left:30px;right:30px;top:12px;height:46px;background:#fff0f7;border-radius:50%}
-.paw{position:absolute;bottom:-7px;width:50px;height:35px;background:#fff7fb;border:4px solid #8c5270;border-radius:50%;z-index:3}.paw.l{left:25px}.paw.r{right:25px}
-.tail{position:absolute;right:12px;bottom:28px;width:72px;height:90px;border:12px solid #ff8fba;border-left-color:transparent;border-bottom-color:transparent;border-radius:50%;transform:rotate(-25deg);z-index:0;animation:tail 1.8s ease-in-out infinite}
-@keyframes tail{50%{transform:rotate(8deg)}}
-.ribbon{position:absolute;top:105px;left:50%;transform:translateX(-50%);z-index:4;width:28px;height:22px;background:#ff4f9a;border-radius:50% 10% 50% 10%;}.ribbon:after{content:"";position:absolute;left:19px;top:0;width:28px;height:22px;background:#ff4f9a;border-radius:10% 50% 10% 50%}
-
-/* cards */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-.card{background:var(--card);border:1px solid #fff;border-radius:25px;padding:24px;box-shadow:var(--shadow);backdrop-filter:blur(12px);transition:.25s}
-.card:hover{transform:translateY(-8px) rotate(-.5deg)}
-.icon{font-size:38px;margin-bottom:12px}.card h3{font-family:Caveat;font-size:30px;color:#9d3264}.card p{font-size:13px;color:#75415d}
-
-/* letter */
-.paper{max-width:850px;margin:auto;background:#fffdfd;border:1px solid #f0dce7;border-radius:30px;padding:clamp(25px,6vw,60px);box-shadow:var(--shadow);position:relative}
-.paper:before{content:"♡";position:absolute;right:30px;top:20px;color:#ff8eb9;font-size:35px}.paper p{font-family:Caveat;font-size:23px;line-height:1.55;color:#713a56}
-.signature{font-family:Caveat;font-size:34px;color:#d44781;text-align:right;margin-top:25px}
-
-/* games */
-.section-head{text-align:center;margin-bottom:30px}
-.game-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.game-card{background:rgba(255,255,255,.78);border:1px solid #fff;border-radius:30px;padding:25px;box-shadow:var(--shadow)}
-.game-card h3{font-family:Caveat;font-size:35px;color:#963264}.game-card p{font-size:13px}
-.play-area{height:250px;border-radius:22px;background:linear-gradient(145deg,#fff0f7,#ffd5e7);position:relative;overflow:hidden;border:1px solid #f6c3d9;margin:15px 0}
-.mini-kitty{position:absolute;font-size:46px;cursor:pointer;user-select:none;filter:drop-shadow(0 5px 5px #a83c6d22);transition:.15s}
-.mini-kitty:hover{transform:scale(1.15) rotate(-8deg)}
-.foods{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}.food{font-size:31px;border:0;background:#fff;border-radius:15px;padding:9px;cursor:pointer;transition:.2s}.food:hover{transform:translateY(-4px) rotate(6deg)}
-.score{font-weight:800;color:#c03c75}.meter{height:12px;background:#ffe1ed;border-radius:99px;overflow:hidden;margin:12px 0}.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff75ae,#e94f91);transition:.35s}
-.find-area{height:250px;position:relative;border-radius:22px;background:#fff1f7;overflow:hidden;margin:15px 0}.hidekitty{position:absolute;font-size:38px;cursor:pointer;transition:.2s}
-
-/* dress up */
-.dress-wrap{display:grid;grid-template-columns:220px 1fr;gap:25px;align-items:center}
-.doll{height:270px;position:relative;background:#ffe1ed;border-radius:25px;display:flex;align-items:center;justify-content:center}
-.doll .kitty{transform:scale(.72);top:45%;animation:none}.accessories{display:flex;flex-wrap:wrap;gap:9px}.acc{padding:10px 13px;border:0;border-radius:15px;background:#fff;cursor:pointer;font-size:20px}.outfit{font-family:Caveat;font-size:27px;color:#a33468;margin-top:14px}
-
-/* secret */
-.secret-box{max-width:600px;margin:auto;text-align:center;background:rgba(255,255,255,.8);border-radius:35px;padding:40px;box-shadow:var(--shadow)}
-.secret-input{width:100%;padding:16px 18px;border-radius:17px;border:2px solid #f1bfd4;outline:none;text-align:center;letter-spacing:5px;font-size:20px;margin:18px 0}.secret-input:focus{border-color:#ff6ca9}
-.secret-content{display:none;margin-top:25px;animation:pop .6s ease}.secret-content.show{display:block}
-@keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
-.big-heart{font-size:80px;animation:heart 1s ease-in-out infinite}.secret-message{font-family:Caveat;font-size:31px;color:#a33468}
-
-/* toast + heart burst */
-#toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);opacity:0;z-index:100;background:#6d294f;color:#fff;padding:12px 18px;border-radius:999px;font-size:13px;font-weight:700;pointer-events:none;transition:.3s}
-#toast.show{opacity:1;transform:translate(-50%,0)}
-.burst{position:fixed;z-index:99;pointer-events:none;font-size:22px;animation:burst 1.3s ease-out forwards}
-@keyframes burst{to{transform:translate(var(--x),var(--y)) scale(.3) rotate(40deg);opacity:0}}
-@keyframes heart{50%{transform:scale(1.15)}}
-
-/* reveal */
-.reveal{opacity:0;transform:translateY(28px);transition:.75s ease}.reveal.visible{opacity:1;transform:none}
-
-/* mobile */
-@media(max-width:800px){
- .topbar{height:58px;padding:7px 10px}.brand{font-size:24px}.navlinks{gap:2px}.navlinks a{padding:8px 10px;font-size:11px}.progress{top:57px}
- section{padding:85px 13px 75px;min-height:auto}.hero-grid{grid-template-columns:1fr;gap:25px}.hero-copy{text-align:center}.hero-actions{justify-content:center}.sub{margin:auto}
- .kitty-stage{height:390px;border-radius:28px}.kitty{transform:translate(-50%,-50%) scale(.78)}.floor{height:70px}
- .cards,.game-grid{grid-template-columns:1fr}.cards{gap:12px}.card{padding:20px}
- .paper{padding:28px 22px}.paper p{font-size:20px}
- .dress-wrap{grid-template-columns:1fr}.doll{height:250px}
- .play-area,.find-area{height:230px}
- h2{font-size:48px}
+::selection{
+ background:#ff8fbe;
+ color:white;
 }
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
-/* extra kawaii layer */
-.kawaii-sticker{position:absolute;z-index:5;font-size:clamp(25px,4vw,42px);filter:drop-shadow(0 7px 5px rgba(153,50,100,.12));animation:stickerFloat 3s ease-in-out infinite}
-.kawaii-sticker.s1{left:7%;top:20%;animation-delay:.2s}.kawaii-sticker.s2{right:7%;top:48%;animation-delay:.8s}.kawaii-sticker.s3{left:15%;bottom:18%;animation-delay:1.4s}.kawaii-sticker.s4{right:15%;bottom:13%;animation-delay:2s}
-@keyframes stickerFloat{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-12px) rotate(6deg)}}
-.cute-pill{display:inline-block;margin-top:14px;padding:8px 13px;background:#fff;border-radius:999px;color:#c14379;font-weight:800;font-size:12px;box-shadow:0 8px 20px rgba(156,48,101,.08)}
-.hero-copy h1{letter-spacing:-1px;text-shadow:3px 4px 0 #fff}
+/* =========================
+   AMBIENT
+========================= */
+
+#ambient{
+ position:fixed;
+ inset:0;
+ pointer-events:none;
+ z-index:1;
+ overflow:hidden;
+}
+
+.spark{
+ position:absolute;
+ font-size:14px;
+ opacity:.45;
+ animation:float 7s ease-in-out infinite;
+}
+
+@keyframes float{
+ 0%,100%{
+  transform:translateY(0) rotate(0);
+  opacity:.2
+ }
+ 50%{
+  transform:translateY(-35px) rotate(12deg);
+  opacity:.7
+ }
+}
+
+.petals{
+ position:absolute;
+ width:9px;
+ height:14px;
+ border-radius:80% 20% 80% 20%;
+ background:#ff91bd;
+ opacity:.35;
+ animation:fall 9s linear infinite;
+}
+
+@keyframes fall{
+ 0%{transform:translateY(-10vh) rotate(0)}
+ 100%{transform:translateY(115vh) rotate(360deg)}
+}
+
+/* anniversary floating hearts */
+
+.anniversary-float{
+ position:absolute;
+ font-size:18px;
+ opacity:.55;
+ animation:annifloat 8s ease-in-out infinite;
+}
+
+@keyframes annifloat{
+ 0%,100%{
+  transform:translateY(0) scale(1);
+  opacity:.25
+ }
+ 50%{
+  transform:translateY(-45px) scale(1.2);
+  opacity:.8
+ }
+}
+
+/* =========================
+   NAV
+========================= */
+
+.topbar{
+ position:fixed;
+ top:0;
+ left:0;
+ right:0;
+ height:64px;
+ z-index:50;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ padding:8px 18px;
+ background:rgba(255,246,251,.72);
+ backdrop-filter:blur(18px);
+ border-bottom:1px solid var(--line);
+}
+
+.brand{
+ font-family:Caveat;
+ font-size:27px;
+ font-weight:700;
+ color:#b93673;
+}
+
+.navlinks{
+ display:flex;
+ gap:7px;
+ overflow:auto;
+ scrollbar-width:none
+}
+
+.navlinks::-webkit-scrollbar{
+ display:none
+}
+
+.navlinks a{
+ white-space:nowrap;
+ padding:9px 13px;
+ border-radius:999px;
+ font-size:12px;
+ font-weight:700;
+}
+
+.navlinks a:hover,
+.navlinks a.active{
+ background:#ff76ad;
+ color:#fff;
+ box-shadow:0 7px 18px #ff76ad45;
+}
+
+.progress{
+ position:fixed;
+ top:63px;
+ left:0;
+ height:3px;
+ width:0;
+ background:linear-gradient(90deg,#ff4f9a,#ffc1da);
+ z-index:51;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+main{
+ position:relative;
+ z-index:2;
+}
+
+section{
+ min-height:100vh;
+ padding:105px 20px 90px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+
+.wrap{
+ width:min(1100px,100%);
+}
+
+.kicker{
+ font-size:12px;
+ text-transform:uppercase;
+ letter-spacing:3px;
+ font-weight:800;
+ color:#cf4b83;
+ margin-bottom:10px;
+}
+
+h1,h2,h3{
+ margin:0
+}
+
+h1{
+ font-family:Caveat;
+ font-size:clamp(58px,9vw,110px);
+ line-height:.85;
+ color:#8c285a;
+}
+
+h2{
+ font-family:Caveat;
+ font-size:clamp(45px,6vw,75px);
+ color:#8c285a;
+}
+
+p{
+ line-height:1.75
+}
+
+.sub{
+ max-width:650px;
+ font-size:16px;
+ color:#75415d;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-grid{
+ display:grid;
+ grid-template-columns:1.05fr .95fr;
+ gap:50px;
+ align-items:center;
+}
+
+.hero-copy{
+ animation:rise .9s ease both;
+}
+
+@keyframes rise{
+ from{
+  opacity:0;
+  transform:translateY(25px)
+ }
+ to{
+  opacity:1;
+  transform:none
+ }
+}
+
+.badge{
+ display:inline-flex;
+ gap:7px;
+ align-items:center;
+ background:#fff;
+ border:1px solid var(--line);
+ border-radius:999px;
+ padding:8px 13px;
+ box-shadow:0 10px 25px #b53e7410;
+ font-size:12px;
+ font-weight:800;
+ margin-bottom:20px;
+}
+
+.anniversary-badge{
+ background:linear-gradient(135deg,#fff,#fff0f7);
+ color:#b73572;
+ border-color:#f7c4d9;
+ box-shadow:0 10px 28px rgba(201,55,116,.13);
+}
+
+.hero-actions{
+ display:flex;
+ gap:10px;
+ flex-wrap:wrap;
+ margin-top:25px;
+}
+
+.btn{
+ border:0;
+ border-radius:18px;
+ padding:13px 18px;
+ cursor:pointer;
+ font-weight:800;
+ color:#fff;
+ background:linear-gradient(135deg,#ff6ca9,#e94f91);
+ box-shadow:0 12px 25px #e94f9140;
+ transition:.2s;
+}
+
+.btn:hover{
+ transform:translateY(-3px) scale(1.02);
+}
+
+.btn.alt{
+ color:#a43a6b;
+ background:#fff;
+ box-shadow:0 10px 24px #b53e7415;
+}
+
+.hero-note{
+ font-family:Caveat;
+ font-size:24px;
+ color:#bd4c7e;
+ margin-top:24px;
+}
+
+.anniversary-title{
+ margin-top:10px;
+ font-family:Caveat;
+ font-size:clamp(28px,4vw,42px);
+ color:#c23d77;
+}
+
+.anniversary-date{
+ display:inline-block;
+ margin-top:12px;
+ padding:9px 16px;
+ border-radius:999px;
+ background:#ffffffb8;
+ border:1px solid #f2bdd3;
+ color:#9c3766;
+ font-weight:800;
+ font-size:13px;
+ box-shadow:0 8px 20px rgba(156,48,101,.08);
+}
+
+/* =========================
+   KITTY STAGE
+========================= */
+
+.kitty-stage{
+ height:470px;
+ position:relative;
+ border-radius:40px;
+ background:linear-gradient(160deg,#fff8fcaa,#ffd5e8cc);
+ border:1px solid #fff;
+ box-shadow:var(--shadow);
+ overflow:hidden;
+}
+
+.moon{
+ position:absolute;
+ right:55px;
+ top:35px;
+ width:75px;
+ height:75px;
+ border-radius:50%;
+ background:#fff6b9;
+ box-shadow:0 0 40px #fff1a6;
+}
+
+.cloud{
+ position:absolute;
+ background:#fff;
+ border-radius:999px;
+ opacity:.65;
+}
+
+.cloud.one{
+ width:100px;
+ height:25px;
+ left:25px;
+ top:80px
+}
+
+.cloud.two{
+ width:120px;
+ height:30px;
+ right:20px;
+ top:130px
+}
+
+.floor{
+ position:absolute;
+ left:0;
+ right:0;
+ bottom:0;
+ height:100px;
+ background:#ffd0e3;
+ border-top:2px solid #fff;
+}
+
+.kitty{
+ position:absolute;
+ width:190px;
+ height:205px;
+ left:50%;
+ top:52%;
+ transform:translate(-50%,-50%);
+ filter:drop-shadow(0 16px 10px #a83c6d18);
+ animation:bounce 2.7s ease-in-out infinite;
+}
+
+@keyframes bounce{
+ 0%,100%{
+  transform:translate(-50%,-50%) translateY(0)
+ }
+ 50%{
+  transform:translate(-50%,-50%) translateY(-13px)
+ }
+}
+
+.ear{
+ position:absolute;
+ width:60px;
+ height:72px;
+ background:#fff7fb;
+ border:5px solid #8c5270;
+ top:0;
+ z-index:0
+}
+
+.ear:after{
+ content:"";
+ position:absolute;
+ inset:12px;
+ background:#ffabc9;
+ clip-path:polygon(50% 0,100% 100%,0 100%)
+}
+
+.ear.l{
+ left:15px;
+ transform:rotate(-27deg);
+ border-radius:45% 55% 20% 50%
+}
+
+.ear.r{
+ right:15px;
+ transform:rotate(27deg);
+ border-radius:55% 45% 50% 20%
+}
+
+.head{
+ position:absolute;
+ left:15px;
+ right:15px;
+ top:30px;
+ height:120px;
+ background:#fff7fb;
+ border:5px solid #8c5270;
+ border-radius:48% 48% 45% 45%;
+ z-index:2;
+}
+
+.face{
+ position:absolute;
+ inset:0;
+}
+
+.eye{
+ position:absolute;
+ top:52px;
+ width:14px;
+ height:20px;
+ border-radius:50%;
+ background:#5c3550
+}
+
+.eye:after{
+ content:"";
+ position:absolute;
+ width:5px;
+ height:7px;
+ background:#fff;
+ border-radius:50%;
+ left:3px;
+ top:3px;
+}
+
+.eye.l{left:49px}
+.eye.r{right:49px}
+
+.blush{
+ position:absolute;
+ top:78px;
+ width:30px;
+ height:13px;
+ border-radius:50%;
+ background:#ff9fc1aa
+}
+
+.blush.l{left:17px}
+.blush.r{right:17px}
+
+.nose{
+ position:absolute;
+ top:76px;
+ left:50%;
+ width:10px;
+ height:8px;
+ background:#f47da9;
+ transform:translateX(-50%) rotate(45deg);
+ border-radius:70% 0 70% 0
+}
+
+.mouth{
+ position:absolute;
+ top:88px;
+ left:50%;
+ width:24px;
+ height:12px;
+ border-bottom:3px solid #8c5270;
+ border-radius:50%;
+ transform:translateX(-50%)
+}
+
+.body{
+ position:absolute;
+ top:128px;
+ left:42px;
+ right:42px;
+ height:75px;
+ background:#ff8fba;
+ border:5px solid #8c5270;
+ border-radius:45% 45% 30% 30%;
+ z-index:1
+}
+
+.belly{
+ position:absolute;
+ left:30px;
+ right:30px;
+ top:12px;
+ height:46px;
+ background:#fff0f7;
+ border-radius:50%
+}
+
+.paw{
+ position:absolute;
+ bottom:-7px;
+ width:50px;
+ height:35px;
+ background:#fff7fb;
+ border:4px solid #8c5270;
+ border-radius:50%;
+ z-index:3
+}
+
+.paw.l{left:25px}
+.paw.r{right:25px}
+
+.tail{
+ position:absolute;
+ right:12px;
+ bottom:28px;
+ width:72px;
+ height:90px;
+ border:12px solid #ff8fba;
+ border-left-color:transparent;
+ border-bottom-color:transparent;
+ border-radius:50%;
+ transform:rotate(-25deg);
+ z-index:0;
+ animation:tail 1.8s ease-in-out infinite
+}
+
+@keyframes tail{
+ 50%{transform:rotate(8deg)}
+}
+
+.ribbon{
+ position:absolute;
+ top:105px;
+ left:50%;
+ transform:translateX(-50%);
+ z-index:4;
+ width:28px;
+ height:22px;
+ background:#ff4f9a;
+ border-radius:50% 10% 50% 10%;
+}
+
+.ribbon:after{
+ content:"";
+ position:absolute;
+ left:19px;
+ top:0;
+ width:28px;
+ height:22px;
+ background:#ff4f9a;
+ border-radius:10% 50% 10% 50%
+}
+
+/* =========================
+   STICKERS
+========================= */
+
+.kawaii-sticker{
+ position:absolute;
+ z-index:5;
+ font-size:clamp(25px,4vw,42px);
+ filter:drop-shadow(0 7px 5px rgba(153,50,100,.12));
+ animation:stickerFloat 3s ease-in-out infinite
+}
+
+.kawaii-sticker.s1{
+ left:7%;
+ top:20%;
+ animation-delay:.2s
+}
+
+.kawaii-sticker.s2{
+ right:7%;
+ top:48%;
+ animation-delay:.8s
+}
+
+.kawaii-sticker.s3{
+ left:15%;
+ bottom:18%;
+ animation-delay:1.4s
+}
+
+.kawaii-sticker.s4{
+ right:15%;
+ bottom:13%;
+ animation-delay:2s
+}
+
+@keyframes stickerFloat{
+ 0%,100%{
+  transform:translateY(0) rotate(-5deg)
+ }
+ 50%{
+  transform:translateY(-12px) rotate(6deg)
+ }
+}
+
+.cute-pill{
+ display:inline-block;
+ margin-top:14px;
+ padding:8px 13px;
+ background:#fff;
+ border-radius:999px;
+ color:#c14379;
+ font-weight:800;
+ font-size:12px;
+ box-shadow:0 8px 20px rgba(156,48,101,.08)
+}
+
+.hero-copy h1{
+ letter-spacing:-1px;
+ text-shadow:3px 4px 0 #fff
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:18px;
+ margin-top:30px
+}
+
+.card{
+ background:var(--card);
+ border:1px solid #fff;
+ border-radius:25px;
+ padding:24px;
+ box-shadow:var(--shadow);
+ backdrop-filter:blur(12px);
+ transition:.25s
+}
+
+.card:hover{
+ transform:translateY(-8px) rotate(-.5deg)
+}
+
+.icon{
+ font-size:38px;
+ margin-bottom:12px
+}
+
+.card h3{
+ font-family:Caveat;
+ font-size:30px;
+ color:#9d3264
+}
+
+.card p{
+ font-size:13px;
+ color:#75415d
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.paper{
+ max-width:850px;
+ margin:auto;
+ background:#fffdfd;
+ border:1px solid #f0dce7;
+ border-radius:30px;
+ padding:clamp(25px,6vw,60px);
+ box-shadow:var(--shadow);
+ position:relative;
+}
+
+.paper:before{
+ content:"♡";
+ position:absolute;
+ right:30px;
+ top:20px;
+ color:#ff8eb9;
+ font-size:35px
+}
+
+.paper p{
+ font-family:Caveat;
+ font-size:23px;
+ line-height:1.55;
+ color:#713a56
+}
+
+.signature{
+ font-family:Caveat;
+ font-size:34px;
+ color:#d44781;
+ text-align:right;
+ margin-top:25px
+}
+
+.letter-stamp{
+ position:absolute;
+ left:25px;
+ top:22px;
+ padding:7px 12px;
+ border:1px dashed #e58bb0;
+ border-radius:10px;
+ transform:rotate(-6deg);
+ font-size:10px;
+ font-weight:800;
+ color:#c74b80;
+ background:#fff6fa;
+}
+
+/* =========================
+   7 REASONS
+========================= */
+
+.reasons-grid{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:15px;
+ margin-top:30px;
+}
+
+.reason{
+ background:rgba(255,255,255,.75);
+ border:1px solid #fff;
+ border-radius:25px;
+ padding:22px 18px;
+ box-shadow:var(--shadow);
+ transition:.25s;
+ position:relative;
+ overflow:hidden;
+}
+
+.reason:hover{
+ transform:translateY(-7px) rotate(.5deg);
+}
+
+.reason-number{
+ font-family:Caveat;
+ font-size:38px;
+ color:#ff65a6;
+ line-height:1;
+}
+
+.reason h3{
+ font-family:Caveat;
+ font-size:25px;
+ color:#9d3264;
+ margin-top:8px;
+}
+
+.reason p{
+ font-size:12px;
+ color:#75415d;
+ margin-bottom:0;
+}
+
+.reason:after{
+ content:"♡";
+ position:absolute;
+ right:14px;
+ bottom:7px;
+ font-size:35px;
+ color:#ffd0e2;
+}
+
+/* =========================
+   7 PROMISES
+========================= */
+
+.promise-box{
+ max-width:850px;
+ margin:30px auto 0;
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:14px;
+}
+
+.promise{
+ background:#fff;
+ border-radius:20px;
+ padding:17px 20px;
+ border:1px solid #f2d7e3;
+ box-shadow:0 10px 25px rgba(156,48,101,.08);
+ display:flex;
+ align-items:center;
+ gap:12px;
+ transition:.2s;
+}
+
+.promise:hover{
+ transform:translateX(5px);
+}
+
+.promise b{
+ width:34px;
+ height:34px;
+ border-radius:50%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ background:#ffe0ed;
+ color:#bd4075;
+ font-family:Caveat;
+ font-size:21px;
+ flex:none;
+}
+
+.promise span{
+ font-size:13px;
+ color:#70405a;
+}
+
+/* =========================
+   GAMES
+========================= */
+
+.section-head{
+ text-align:center;
+ margin-bottom:30px
+}
+
+.game-grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:20px
+}
+
+.game-card{
+ background:rgba(255,255,255,.78);
+ border:1px solid #fff;
+ border-radius:30px;
+ padding:25px;
+ box-shadow:var(--shadow)
+}
+
+.game-card h3{
+ font-family:Caveat;
+ font-size:35px;
+ color:#963264
+}
+
+.game-card p{
+ font-size:13px
+}
+
+.play-area{
+ height:250px;
+ border-radius:22px;
+ background:linear-gradient(145deg,#fff0f7,#ffd5e7);
+ position:relative;
+ overflow:hidden;
+ border:1px solid #f6c3d9;
+ margin:15px 0
+}
+
+.mini-kitty{
+ position:absolute;
+ font-size:46px;
+ cursor:pointer;
+ user-select:none;
+ filter:drop-shadow(0 5px 5px #a83c6d22);
+ transition:.15s
+}
+
+.mini-kitty:hover{
+ transform:scale(1.15) rotate(-8deg)
+}
+
+.foods{
+ display:flex;
+ gap:10px;
+ flex-wrap:wrap;
+ margin:15px 0
+}
+
+.food{
+ font-size:31px;
+ border:0;
+ background:#fff;
+ border-radius:15px;
+ padding:9px;
+ cursor:pointer;
+ transition:.2s
+}
+
+.food:hover{
+ transform:translateY(-4px) rotate(6deg)
+}
+
+.score{
+ font-weight:800;
+ color:#c03c75
+}
+
+.meter{
+ height:12px;
+ background:#ffe1ed;
+ border-radius:99px;
+ overflow:hidden;
+ margin:12px 0
+}
+
+.meter i{
+ display:block;
+ height:100%;
+ width:0;
+ background:linear-gradient(90deg,#ff75ae,#e94f91);
+ transition:.35s
+}
+
+.find-area{
+ height:250px;
+ position:relative;
+ border-radius:22px;
+ background:#fff1f7;
+ overflow:hidden;
+ margin:15px 0
+}
+
+.hidekitty{
+ position:absolute;
+ font-size:38px;
+ cursor:pointer;
+ transition:.2s
+}
+
+/* =========================
+   DRESS UP
+========================= */
+
+.dress-wrap{
+ display:grid;
+ grid-template-columns:220px 1fr;
+ gap:25px;
+ align-items:center
+}
+
+.doll{
+ height:270px;
+ position:relative;
+ background:#ffe1ed;
+ border-radius:25px;
+ display:flex;
+ align-items:center;
+ justify-content:center
+}
+
+.doll .kitty{
+ transform:scale(.72);
+ top:45%;
+ animation:none
+}
+
+.accessories{
+ display:flex;
+ flex-wrap:wrap;
+ gap:9px
+}
+
+.acc{
+ padding:10px 13px;
+ border:0;
+ border-radius:15px;
+ background:#fff;
+ cursor:pointer;
+ font-size:20px
+}
+
+.outfit{
+ font-family:Caveat;
+ font-size:27px;
+ color:#a33468;
+ margin-top:14px
+}
+
+/* =========================
+   SECRET
+========================= */
+
+.secret-box{
+ max-width:600px;
+ margin:auto;
+ text-align:center;
+ background:rgba(255,255,255,.8);
+ border-radius:35px;
+ padding:40px;
+ box-shadow:var(--shadow)
+}
+
+.secret-input{
+ width:100%;
+ padding:16px 18px;
+ border-radius:17px;
+ border:2px solid #f1bfd4;
+ outline:none;
+ text-align:center;
+ letter-spacing:5px;
+ font-size:20px;
+ margin:18px 0
+}
+
+.secret-input:focus{
+ border-color:#ff6ca9
+}
+
+.secret-content{
+ display:none;
+ margin-top:25px;
+ animation:pop .6s ease
+}
+
+.secret-content.show{
+ display:block
+}
+
+@keyframes pop{
+ from{
+  opacity:0;
+  transform:scale(.85)
+ }
+ to{
+  opacity:1;
+  transform:none
+ }
+}
+
+.big-heart{
+ font-size:80px;
+ animation:heart 1s ease-in-out infinite
+}
+
+.secret-message{
+ font-family:Caveat;
+ font-size:31px;
+ color:#a33468
+}
+
+.secret-anniversary{
+ font-family:Caveat;
+ font-size:25px;
+ color:#c13e76;
+ margin-top:12px;
+}
+
+/* =========================
+   TOAST + BURST
+========================= */
+
+#toast{
+ position:fixed;
+ left:50%;
+ bottom:90px;
+ transform:translate(-50%,20px);
+ opacity:0;
+ z-index:100;
+ background:#6d294f;
+ color:#fff;
+ padding:12px 18px;
+ border-radius:999px;
+ font-size:13px;
+ font-weight:700;
+ pointer-events:none;
+ transition:.3s
+}
+
+#toast.show{
+ opacity:1;
+ transform:translate(-50%,0)
+}
+
+.burst{
+ position:fixed;
+ z-index:99;
+ pointer-events:none;
+ font-size:22px;
+ animation:burst 1.3s ease-out forwards
+}
+
+@keyframes burst{
+ to{
+  transform:translate(var(--x),var(--y)) scale(.3) rotate(40deg);
+  opacity:0
+ }
+}
+
+@keyframes heart{
+ 50%{transform:scale(1.15)}
+}
+
+/* =========================
+   REVEAL
+========================= */
+
+.reveal{
+ opacity:0;
+ transform:translateY(28px);
+ transition:.75s ease
+}
+
+.reveal.visible{
+ opacity:1;
+ transform:none
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+ .topbar{
+  height:58px;
+  padding:7px 10px
+ }
+
+ .brand{
+  font-size:24px
+ }
+
+ .navlinks{
+  gap:2px
+ }
+
+ .navlinks a{
+  padding:8px 10px;
+  font-size:11px
+ }
+
+ .progress{
+  top:57px
+ }
+
+ section{
+  padding:85px 13px 75px;
+  min-height:auto
+ }
+
+ .hero-grid{
+  grid-template-columns:1fr;
+  gap:25px
+ }
+
+ .hero-copy{
+  text-align:center
+ }
+
+ .hero-actions{
+  justify-content:center
+ }
+
+ .sub{
+  margin:auto
+ }
+
+ .kitty-stage{
+  height:390px;
+  border-radius:28px
+ }
+
+ .kitty{
+  transform:translate(-50%,-50%) scale(.78)
+ }
+
+ .floor{
+  height:70px
+ }
+
+ .cards,
+ .game-grid{
+  grid-template-columns:1fr
+ }
+
+ .cards{
+  gap:12px
+ }
+
+ .card{
+  padding:20px
+ }
+
+ .paper{
+  padding:28px 22px
+ }
+
+ .paper p{
+  font-size:20px
+ }
+
+ .dress-wrap{
+  grid-template-columns:1fr
+ }
+
+ .doll{
+  height:250px
+ }
+
+ .play-area,
+ .find-area{
+  height:230px
+ }
+
+ h2{
+  font-size:48px
+ }
+
+ .reasons-grid{
+  grid-template-columns:repeat(2,1fr);
+  gap:11px
+ }
+
+ .reason{
+  padding:18px 14px
+ }
+
+ .reason h3{
+  font-size:23px
+ }
+
+ .promise-box{
+  grid-template-columns:1fr
+ }
+
+ .anniversary-title{
+  font-size:31px
+ }
+
+ .letter-stamp{
+  position:relative;
+  display:inline-block;
+  left:auto;
+  top:auto;
+  margin-bottom:15px
+ }
+}
+
+@media(prefers-reduced-motion:reduce){
+ *,
+ *:before,
+ *:after{
+  animation:none!important;
+  transition:none!important;
+  scroll-behavior:auto!important
+ }
+}
 </style>
 </head>
+
 <body>
+
 <div id="ambient"></div>
 
 <header class="topbar">
  <a class="brand" href="#home">For Anu ♡</a>
+
  <nav class="navlinks" id="nav">
-  <a href="#home">Home</a><a href="#letter">Letter</a><a href="#games">Games</a><a href="#kitty">Kitty</a><a href="#secret">Secret</a>
+  <a href="#home">Home</a>
+  <a href="#letter">Letter</a>
+  <a href="#reasons">7 Things</a>
+  <a href="#games">Games</a>
+  <a href="#kitty">Kitty</a>
+  <a href="#secret">Secret</a>
  </nav>
 </header>
+
 <div class="progress" id="progress"></div>
 
 <main>
+
+<!-- =========================
+     HOME
+========================= -->
+
 <section id="home">
+
  <div class="wrap hero-grid">
+
   <div class="hero-copy">
-   <div class="badge">🎀 welcome to Anu's tiny kitty world 🎀</div>
-   <h1>Hii Anuuu~! ♡</h1>
-   <p class="sub">૮ ˶ᵔ ᵕ ᵔ˶ ა A tiny pink anime world made especially for you… full of fluffy kitties, sparkles, silly games and cute little surprises.</p>
-   <div class="hero-actions">
-    <a class="btn" href="#games">🐾 Play with the kitties</a>
-    <a class="btn alt" href="#kitty">🎀 Meet your kitties</a>
+
+   <div class="badge anniversary-badge">
+    🎀 HAPPY 7 MONTHS, ANUUU 🎀
    </div>
-   <div class="hero-note">ฅ^•ﻌ•^ฅ “pspspsps… Anu, come hereee ♡”</div>
+
+   <h1>Hii Anuuu~! ♡</h1>
+
+   <div class="anniversary-title">
+    seven months of us 🫂💗
+   </div>
+
+   <div class="anniversary-date">
+    07 MARCH ♡ 07 OCTOBER — 7 MONTHS
+   </div>
+
+   <p class="sub">
+    ૮ ˶ᵔ ᵕ ᵔ˶ ა A tiny pink anniversary world made especially for you…
+    seven months of us, countless little moments, silly conversations,
+    stupid jokes, love, fights, making up, and somehow still choosing each other.
+   </p>
+
+   <div class="hero-actions">
+    <a class="btn" href="#letter">💌 Read your anniversary note</a>
+    <a class="btn alt" href="#games">🐾 Play with the kitties</a>
+   </div>
+
+   <div class="hero-note">
+    ฅ^•ﻌ•^ฅ “pspspsps… Anu, come hereee, it's our 7 months ♡”
+   </div>
+
+   <span class="cute-pill">
+    7 months • one us • countless more to go ♡
+   </span>
+
   </div>
 
+
   <div class="kitty-stage">
+
    <div class="kawaii-sticker s1">🎀</div>
    <div class="kawaii-sticker s2">💗</div>
    <div class="kawaii-sticker s3">🌸</div>
    <div class="kawaii-sticker s4">🐾</div>
-   <div class="moon"></div><div class="cloud one"></div><div class="cloud two"></div><div class="floor"></div>
+
+   <div class="moon"></div>
+   <div class="cloud one"></div>
+   <div class="cloud two"></div>
+   <div class="floor"></div>
+
    <div class="kitty" aria-label="anime pink kitty">
-    <div class="tail"></div><div class="ear l"></div><div class="ear r"></div>
-    <div class="head"><div class="face"><div class="eye l"></div><div class="eye r"></div><div class="blush l"></div><div class="blush r"></div><div class="nose"></div><div class="mouth"></div></div></div>
-    <div class="ribbon"></div><div class="body"><div class="belly"></div></div><div class="paw l"></div><div class="paw r"></div>
+
+    <div class="tail"></div>
+
+    <div class="ear l"></div>
+    <div class="ear r"></div>
+
+    <div class="head">
+     <div class="face">
+      <div class="eye l"></div>
+      <div class="eye r"></div>
+      <div class="blush l"></div>
+      <div class="blush r"></div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+     </div>
+    </div>
+
+    <div class="ribbon"></div>
+
+    <div class="body">
+     <div class="belly"></div>
+    </div>
+
+    <div class="paw l"></div>
+    <div class="paw r"></div>
+
    </div>
+
   </div>
+
  </div>
+
 </section>
+
+
+<!-- =========================
+     LETTER
+========================= -->
 
 <section id="letter">
+
  <div class="wrap">
-  <div class="section-head reveal"><div class="kicker">💌 a tiny note hiding here</div><h2>For my Anuuu ♡</h2></div>
-  <div class="paper reveal">
-   <p>Seven months already… and somehow you still manage to be my favourite person to annoy, love, tease and care about all at once.</p>
-   <p>I know I have made mistakes, had moods, overthought things and sometimes made things harder than they needed to be. But through all of that, you stayed. You never really turned your face away from me, and that means more to me than I can properly put into words.</p>
-   <p>I just want you to know that I choose you. Not only on the easy days, but on the weird, messy and difficult ones too. I want us to keep learning each other, laughing at stupid things, making our own little world and collecting a million more moments together.</p>
-   <p>Happy seven months, meri Anuuu. Keep being my favourite girl, my soft corner and the person I somehow always want to come back to. ♡</p>
-   <div class="signature">— yours, always ♡</div>
+
+  <div class="section-head reveal">
+   <div class="kicker">💌 seven months • one little letter</div>
+   <h2>For my Anuuu ♡</h2>
   </div>
+
+  <div class="paper reveal">
+
+   <div class="letter-stamp">
+    OUR 7TH MONTH ♡
+   </div>
+
+   <p>
+    Seven months already, Anuuu… seven months of us. 🥹
+    And honestly, when I look back at everything we've been through,
+    it feels crazy how many little moments we've managed to create together.
+   </p>
+
+   <p>
+    From random conversations and stupid jokes to the serious talks,
+    the overthinking, the misunderstandings, the moments where things
+    weren't easy and all those times we somehow found our way back to each other…
+    every bit of it became a part of our story.
+   </p>
+
+   <p>
+    I know I'm not perfect. I've had my moods, I've overthought,
+    I've made mistakes and sometimes I've made things harder than they
+    needed to be. But one thing that hasn't changed is that I still
+    choose you. I still want us. I still want to understand you better,
+    care for you better and make this little world of ours better.
+   </p>
+
+   <p>
+    Seven months isn't just a number to me.
+    It's seven months of knowing you, loving you, annoying you,
+    missing you, laughing with you, worrying about you and having
+    one person who somehow became such a huge part of my everyday life.
+   </p>
+
+   <p>
+    So on our 7 months, I just want to say this:
+    thank you for being my Anu. Thank you for staying through the messy
+    parts too. And here's to all the silly little moments we haven't
+    even had yet. There are still so many chapters left for us to write.
+   </p>
+
+   <p>
+    Happy 7 months, meri Anuuu. 💗
+    Keep being my favourite girl, my soft corner, my comfort person
+    and the person I somehow always want to come back to.
+   </p>
+
+   <div class="signature">
+    — yours, always ♡
+   </div>
+
+  </div>
+
  </div>
+
 </section>
+
+
+<!-- =========================
+     7 THINGS
+========================= -->
+
+<section id="reasons">
+
+ <div class="wrap">
+
+  <div class="section-head reveal">
+   <div class="kicker">💗 seven little things</div>
+   <h2>7 things I love about us ♡</h2>
+
+   <p class="sub" style="margin:auto">
+    Because seven months deserve seven little reminders.
+   </p>
+  </div>
+
+
+  <div class="reasons-grid">
+
+   <article class="reason reveal">
+    <div class="reason-number">01</div>
+    <h3>Your softness</h3>
+    <p>
+     The way you care, even in the smallest little ways.
+    </p>
+   </article>
+
+   <article class="reason reveal">
+    <div class="reason-number">02</div>
+    <h3>Our chaos</h3>
+    <p>
+     Somehow even the dumbest conversations become memories with you.
+    </p>
+   </article>
+
+   <article class="reason reveal">
+    <div class="reason-number">03</div>
+    <h3>The comfort</h3>
+    <p>
+     Being able to talk to you and feel like I can just be myself.
+    </p>
+   </article>
+
+   <article class="reason reveal">
+    <div class="reason-number">04</div>
+    <h3>Your little habits</h3>
+    <p>
+     The tiny things you probably don't even realise I notice.
+    </p>
+   </article>
+
+   <article class="reason reveal">
+    <div class="reason-number">05</div>
+    <h3>Our silly side</h3>
+    <p>
+     The teasing, random jokes and absolutely unnecessary nonsense.
+    </p>
+   </article>
+
+   <article class="reason reveal">
+    <div class="reason-number">06</div>
+    <h3>We keep trying</h3>
+    <p>
+     Even when things get messy, we still try to understand each other.
+    </p>
+   </article>
+
+   <article class="reason reveal">
+    <div class="reason-number">07</div>
+    <h3>It's us</h3>
+    <p>
+     Out of everything, I simply love that it's you and me.
+    </p>
+   </article>
+
+   <article class="reason reveal">
+    <div class="reason-number">∞</div>
+    <h3>And more to come</h3>
+    <p>
+     Seven months is only one chapter. I'm not done making memories with you.
+    </p>
+   </article>
+
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- =========================
+     PROMISES
+========================= -->
+
+<section id="promises">
+
+ <div class="wrap">
+
+  <div class="section-head reveal">
+
+   <div class="kicker">🎀 tiny anniversary promises</div>
+
+   <h2>For the months ahead ♡</h2>
+
+   <p class="sub" style="margin:auto">
+    Not perfect promises. Just little things I want to keep choosing.
+   </p>
+
+  </div>
+
+
+  <div class="promise-box">
+
+   <div class="promise reveal">
+    <b>1</b>
+    <span>I'll keep choosing us, even when things aren't perfectly easy.</span>
+   </div>
+
+   <div class="promise reveal">
+    <b>2</b>
+    <span>I'll keep learning how to understand you instead of assuming.</span>
+   </div>
+
+   <div class="promise reveal">
+    <b>3</b>
+    <span>I'll keep making stupid little moments that make you smile.</span>
+   </div>
+
+   <div class="promise reveal">
+    <b>4</b>
+    <span>I'll keep giving you a place where you can simply be yourself.</span>
+   </div>
+
+   <div class="promise reveal">
+    <b>5</b>
+    <span>I'll keep caring about the tiny things that matter to you.</span>
+   </div>
+
+   <div class="promise reveal">
+    <b>6</b>
+    <span>I'll keep making our little world feel like ours.</span>
+   </div>
+
+   <div class="promise reveal">
+    <b>7</b>
+    <span>And I'll keep looking forward to every month that comes after this one. ♡</span>
+   </div>
+
+   <div class="promise reveal">
+    <b>∞</b>
+    <span>Because seven months shouldn't feel like the ending of anything.</span>
+   </div>
+
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- =========================
+     GAMES
+========================= -->
 
 <section id="games">
+
  <div class="wrap">
-  <div class="section-head reveal"><div class="kicker">ฅ^•ﻌ•^ฅ tiny kitty arcade</div><h2>Playyy with meee 🎀</h2><p class="sub" style="margin:auto">No boring stuff. Just cute kitty chaos ♡ Just separate little games to mess around with.</p></div>
+
+  <div class="section-head reveal">
+
+   <div class="kicker">ฅ^•ﻌ•^ฅ anniversary kitty arcade</div>
+
+   <h2>Playyy with meee 🎀</h2>
+
+   <p class="sub" style="margin:auto">
+    Seven months, four tiny games and absolutely zero seriousness.
+   </p>
+
+  </div>
+
 
   <div class="game-grid">
-   <article class="game-card reveal">
-    <h3>🐾 Catch the kitty</h3><p>She is fast. You are supposed to catch her. Good luck.</p>
-    <div class="play-area" id="catchArea"><div class="mini-kitty" id="catchKitty">🐱</div></div>
-    <div class="score">Caught: <span id="catchScore">0</span> / 10</div>
-    <button class="btn" style="margin-top:12px" onclick="resetCatch()">Restart</button>
-   </article>
+
+   <!-- CATCH -->
 
    <article class="game-card reveal">
-    <h3>🍓 Feed the baby</h3><p>Pick the food she likes. Fill her happiness meter.</p>
-    <div class="play-area" style="display:flex;align-items:center;justify-content:center;flex-direction:column">
-      <div id="feedKitty" style="font-size:70px;animation:bounce 2s infinite">🐱</div>
-      <div class="meter" style="width:70%"><i id="feedMeter"></i></div>
-      <div class="score">Happiness: <span id="feedScore">0</span>%</div>
+
+    <h3>🐾 Catch the kitty</h3>
+
+    <p>
+     She is fast. You are supposed to catch her.
+     Anniversary kitty has zero intention of cooperating.
+    </p>
+
+    <div class="play-area" id="catchArea">
+     <div class="mini-kitty" id="catchKitty">🐱</div>
     </div>
+
+    <div class="score">
+     Caught: <span id="catchScore">0</span> / 10
+    </div>
+
+    <button class="btn" style="margin-top:12px" onclick="resetCatch()">
+     Restart
+    </button>
+
+   </article>
+
+
+   <!-- FEED -->
+
+   <article class="game-card reveal">
+
+    <h3>🍓 Feed the baby</h3>
+
+    <p>
+     Pick the food she likes.
+     Make anniversary kitty reach maximum happiness.
+    </p>
+
+    <div
+     class="play-area"
+     style="display:flex;align-items:center;justify-content:center;flex-direction:column"
+    >
+
+     <div id="feedKitty"
+          style="font-size:70px;animation:bounce 2s infinite">
+      🐱
+     </div>
+
+     <div class="meter" style="width:70%">
+      <i id="feedMeter"></i>
+     </div>
+
+     <div class="score">
+      Happiness: <span id="feedScore">0</span>%
+     </div>
+
+    </div>
+
     <div class="foods">
-      <button class="food" onclick="feed(20)">🍓</button><button class="food" onclick="feed(15)">🍰</button><button class="food" onclick="feed(25)">🧁</button><button class="food" onclick="feed(-10)">🥦</button>
+     <button class="food" onclick="feed(20)">🍓</button>
+     <button class="food" onclick="feed(15)">🍰</button>
+     <button class="food" onclick="feed(25)">🧁</button>
+     <button class="food" onclick="feed(-10)">🥦</button>
     </div>
+
    </article>
 
+
+   <!-- DRESS -->
+
    <article class="game-card reveal">
-    <h3>🎀 Dress the kitty</h3><p>Give the anime kitty a tiny outfit.</p>
+
+    <h3>🎀 Dress the kitty</h3>
+
+    <p>
+     Give the anniversary kitty a tiny outfit.
+     She deserves to look fancy today.
+    </p>
+
     <div class="dress-wrap">
-      <div class="doll"><div class="kitty" style="position:relative;left:auto;top:auto;transform:scale(.62);"><div class="tail"></div><div class="ear l"></div><div class="ear r"></div><div class="head"><div class="face"><div class="eye l"></div><div class="eye r"></div><div class="blush l"></div><div class="blush r"></div><div class="nose"></div><div class="mouth"></div></div></div><div class="ribbon"></div><div class="body"><div class="belly"></div></div><div class="paw l"></div><div class="paw r"></div></div></div>
-      <div><div class="accessories">
-       <button class="acc" onclick="dress('🎀','Pink ribbon')">🎀</button><button class="acc" onclick="dress('👑','Princess crown')">👑</button><button class="acc" onclick="dress('🌸','Sakura')">🌸</button><button class="acc" onclick="dress('🕶️','Cool kitty')">🕶️</button><button class="acc" onclick="dress('💗','Love charm')">💗</button>
-      </div><div class="outfit" id="outfit">Choose her look ♡</div></div>
+
+     <div class="doll">
+
+      <div
+       class="kitty"
+       style="position:relative;left:auto;top:auto;transform:scale(.62);"
+      >
+
+       <div class="tail"></div>
+       <div class="ear l"></div>
+       <div class="ear r"></div>
+
+       <div class="head">
+        <div class="face">
+         <div class="eye l"></div>
+         <div class="eye r"></div>
+         <div class="blush l"></div>
+         <div class="blush r"></div>
+         <div class="nose"></div>
+         <div class="mouth"></div>
+        </div>
+       </div>
+
+       <div class="ribbon"></div>
+
+       <div class="body">
+        <div class="belly"></div>
+       </div>
+
+       <div class="paw l"></div>
+       <div class="paw r"></div>
+
+      </div>
+
+     </div>
+
+
+     <div>
+
+      <div class="accessories">
+
+       <button class="acc"
+        onclick="dress('🎀','Pink ribbon')">
+        🎀
+       </button>
+
+       <button class="acc"
+        onclick="dress('👑','Princess crown')">
+        👑
+       </button>
+
+       <button class="acc"
+        onclick="dress('🌸','Sakura')">
+        🌸
+       </button>
+
+       <button class="acc"
+        onclick="dress('🕶️','Cool kitty')">
+        🕶️
+       </button>
+
+       <button class="acc"
+        onclick="dress('💗','Love charm')">
+        💗
+       </button>
+
+      </div>
+
+      <div class="outfit" id="outfit">
+       Choose her anniversary look ♡
+      </div>
+
+     </div>
+
     </div>
+
    </article>
 
+
+   <!-- FIND -->
+
    <article class="game-card reveal">
-    <h3>🔎 Find the hidden kitty</h3><p>She is hiding somewhere in the pink room. Tap her when you spot her.</p>
-    <div class="find-area" id="findArea"><div class="hidekitty" id="hideKitty">🐱</div></div>
-    <div class="score">Found: <span id="findScore">0</span></div>
-    <button class="btn" style="margin-top:12px" onclick="moveHidden()">Hide again</button>
+
+    <h3>🔎 Find the hidden kitty</h3>
+
+    <p>
+     She is hiding somewhere in the pink room.
+     Tap her when you spot her.
+    </p>
+
+    <div class="find-area" id="findArea">
+     <div class="hidekitty" id="hideKitty">🐱</div>
+    </div>
+
+    <div class="score">
+     Found: <span id="findScore">0</span>
+    </div>
+
+    <button class="btn" style="margin-top:12px" onclick="moveHidden()">
+     Hide again
+    </button>
+
    </article>
+
   </div>
+
  </div>
+
 </section>
+
+
+<!-- =========================
+     KITTY
+========================= -->
 
 <section id="kitty">
+
  <div class="wrap">
-  <div class="section-head reveal"><div class="kicker">ฅ^•ﻌ•^ฅ kitty corner</div><h2>Anu's fluffy little gang ♡</h2><p class="sub" style="margin:auto">They have absolutely no idea what is going on. They are just here to love you.</p></div>
-  <div class="cards">
-   <div class="card reveal"><div class="icon">🐱</div><h3>Mochi</h3><p>Soft. Round. Confused. Will follow Anu around the entire pink room.</p><button class="btn" onclick="toast('Mochi says: meowww Anuuu 🎀')">Pet Mochi</button></div>
-   <div class="card reveal"><div class="icon">🐰</div><h3>Berry</h3><p>A tiny bunny-kitty who thinks every strawberry belongs to her. Zero regrets.</p><button class="btn alt" onclick="heartBurst(event)">Give Berry a hug ♡</button></div>
-   <div class="card reveal"><div class="icon">🐈</div><h3>Peach</h3><p>The dramatic one. She saw Anu and immediately decided she lives here now.</p><button class="btn" onclick="toast('Peach has claimed your lap. 😭💗')">Say hi to Peach</button></div>
+
+  <div class="section-head reveal">
+
+   <div class="kicker">ฅ^•ﻌ•^ฅ anniversary kitty corner</div>
+
+   <h2>Anu's fluffy little gang ♡</h2>
+
+   <p class="sub" style="margin:auto">
+    They heard it's your 7 months and immediately decided
+    they're part of the celebration.
+   </p>
+
   </div>
+
+
+  <div class="cards">
+
+   <div class="card reveal">
+
+    <div class="icon">🐱</div>
+
+    <h3>Mochi</h3>
+
+    <p>
+     Soft. Round. Confused.
+     Will follow Anu around the entire pink room
+     because apparently seven months means maximum cuddles.
+    </p>
+
+    <button
+     class="btn"
+     onclick="toast('Mochi says: happy 7 months Anuuu 🎀')"
+    >
+     Pet Mochi
+    </button>
+
+   </div>
+
+
+   <div class="card reveal">
+
+    <div class="icon">🐰</div>
+
+    <h3>Berry</h3>
+
+    <p>
+     A tiny bunny-kitty who thinks every strawberry belongs to her.
+     She has also decided you're her favourite person.
+    </p>
+
+    <button
+     class="btn alt"
+     onclick="heartBurst(event)"
+    >
+     Give Berry a hug ♡
+    </button>
+
+   </div>
+
+
+   <div class="card reveal">
+
+    <div class="icon">🐈</div>
+
+    <h3>Peach</h3>
+
+    <p>
+     The dramatic one.
+     She saw Anu and immediately decided she lives here now.
+     No discussion.
+    </p>
+
+    <button
+     class="btn"
+     onclick="toast('Peach has claimed your lap. 😭💗')"
+    >
+     Say hi to Peach
+    </button>
+
+   </div>
+
+  </div>
+
  </div>
+
 </section>
 
+
+<!-- =========================
+     SECRET
+========================= -->
+
 <section id="secret">
+
  <div class="wrap">
-  <div class="section-head reveal"><div class="kicker">Private little room</div><h2>Shhh… 🔐</h2></div>
-  <div class="secret-box reveal">
-   <p>There is one tiny door hidden here. You know the code.</p>
-   <input id="secretInput" class="secret-input" inputmode="numeric" maxlength="6" placeholder="••••••" aria-label="secret code">
-   <button class="btn" onclick="unlock()">Unlock ♡</button>
-   <div class="secret-content" id="secretContent">
-    <div class="big-heart">💗</div>
-    <div class="secret-message">030726<br>because some dates deserve their own little room.</div>
-    <p>Now come here, idiot. You found it. ♡</p>
-   </div>
+
+  <div class="section-head reveal">
+
+   <div class="kicker">Private little anniversary room</div>
+
+   <h2>Shhh… 🔐</h2>
+
+   <p class="sub" style="margin:auto">
+    There's one little door here.
+    Only Anu is supposed to know how to open it.
+   </p>
+
   </div>
+
+
+  <div class="secret-box reveal">
+
+   <p>
+    There is one tiny door hidden here.
+    You know the code. ♡
+   </p>
+
+   <input
+    id="secretInput"
+    class="secret-input"
+    inputmode="numeric"
+    maxlength="6"
+    placeholder="••••••"
+    aria-label="secret code"
+   >
+
+   <button class="btn" onclick="unlock()">
+    Unlock ♡
+   </button>
+
+
+   <div class="secret-content" id="secretContent">
+
+    <div class="big-heart">💗</div>
+
+    <div class="secret-message">
+     030726
+     <br>
+     because some dates deserve their own little room.
+    </div>
+
+    <div class="secret-anniversary">
+     7 months of us ♡
+    </div>
+
+    <p>
+     Now come here, idiot.
+     You found the secret anniversary room. 😭💗
+    </p>
+
+    <button class="btn" onclick="anniversaryBurst()">
+     Celebrate with me 🎀
+    </button>
+
+   </div>
+
+  </div>
+
  </div>
+
 </section>
+
 </main>
 
 <div id="toast"></div>
 
+
 <script>
-const $=s=>document.querySelector(s);
 
-/* ambient */
-const amb=$('#ambient');
+/* =========================
+   HELPERS
+========================= */
+
+const $ = s => document.querySelector(s);
+
+
+/* =========================
+   AMBIENT
+========================= */
+
+const amb = $('#ambient');
+
 for(let i=0;i<18;i++){
- const s=document.createElement('span');s.className='spark';s.textContent=['♡','✦','˚','✿'][i%4];
- s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*7+'s';amb.appendChild(s);
-}
-for(let i=0;i<12;i++){
- const p=document.createElement('i');p.className='petals';p.style.left=Math.random()*100+'%';p.style.animationDelay=Math.random()*9+'s';p.style.animationDuration=(7+Math.random()*6)+'s';amb.appendChild(p);
+
+ const s = document.createElement('span');
+
+ s.className = 'spark';
+
+ s.textContent = ['♡','✦','˚','✿'][i%4];
+
+ s.style.left = Math.random()*100+'%';
+
+ s.style.top = Math.random()*100+'%';
+
+ s.style.animationDelay =
+   Math.random()*7+'s';
+
+ amb.appendChild(s);
 }
 
-/* navigation + progress */
-const sections=[...document.querySelectorAll('section')], links=[...document.querySelectorAll('.navlinks a')];
-const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+
+for(let i=0;i<12;i++){
+
+ const p = document.createElement('i');
+
+ p.className = 'petals';
+
+ p.style.left =
+   Math.random()*100+'%';
+
+ p.style.animationDelay =
+   Math.random()*9+'s';
+
+ p.style.animationDuration =
+   (7+Math.random()*6)+'s';
+
+ amb.appendChild(p);
+}
+
+
+/* anniversary floating decorations */
+
+for(let i=0;i<12;i++){
+
+ const a = document.createElement('span');
+
+ a.className = 'anniversary-float';
+
+ a.textContent =
+   ['💗','♡','🎀','✨','🌷'][i%5];
+
+ a.style.left =
+   Math.random()*100+'%';
+
+ a.style.top =
+   Math.random()*100+'%';
+
+ a.style.animationDelay =
+   Math.random()*8+'s';
+
+ amb.appendChild(a);
+}
+
+
+/* =========================
+   NAVIGATION + PROGRESS
+========================= */
+
+const sections =
+ [...document.querySelectorAll('section')];
+
+const links =
+ [...document.querySelectorAll('.navlinks a')];
+
+
+const io =
+ new IntersectionObserver(
+  entries =>
+   entries.forEach(e=>{
+    if(e.isIntersecting)
+     e.target.classList.add('visible')
+   }),
+  {threshold:.12}
+ );
+
+
+document
+ .querySelectorAll('.reveal')
+ .forEach(x=>io.observe(x));
+
+
 window.addEventListener('scroll',()=>{
- const max=document.documentElement.scrollHeight-innerHeight;
- $('#progress').style.width=(scrollY/max*100)+'%';
+
+ const max =
+   document.documentElement.scrollHeight-innerHeight;
+
+ $('#progress').style.width =
+   (scrollY/max*100)+'%';
+
  let current='home';
- sections.forEach(s=>{if(scrollY>=s.offsetTop-180)current=s.id});
- links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current));
+
+ sections.forEach(s=>{
+  if(scrollY>=s.offsetTop-180)
+   current=s.id;
+ });
+
+ links.forEach(a=>
+  a.classList.toggle(
+   'active',
+   a.getAttribute('href')==='#'+current
+  )
+ );
+
 },{passive:true});
 
-/* toast */
+
+/* =========================
+   TOAST
+========================= */
+
 let toastTimer;
+
 function toast(msg){
- const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);
- toastTimer=setTimeout(()=>t.classList.remove('show'),1800);
+
+ const t = $('#toast');
+
+ t.textContent = msg;
+
+ t.classList.add('show');
+
+ clearTimeout(toastTimer);
+
+ toastTimer =
+   setTimeout(
+    ()=>t.classList.remove('show'),
+    1800
+   );
 }
+
+
+/* =========================
+   HEART BURST
+========================= */
+
 function heartBurst(e){
- const r=e.target.getBoundingClientRect();
+
+ const r =
+   e.target.getBoundingClientRect();
+
  for(let i=0;i<16;i++){
-  const h=document.createElement('span');h.className='burst';h.textContent=['💗','♡','✨','🎀'][i%4];
-  h.style.left=(r.left+r.width/2)+'px';h.style.top=(r.top+r.height/2)+'px';
-  h.style.setProperty('--x',(Math.random()*240-120)+'px');h.style.setProperty('--y',(Math.random()*-220-30)+'px');
-  document.body.appendChild(h);setTimeout(()=>h.remove(),1300);
+
+  const h =
+   document.createElement('span');
+
+  h.className='burst';
+
+  h.textContent =
+   ['💗','♡','✨','🎀'][i%4];
+
+  h.style.left =
+   (r.left+r.width/2)+'px';
+
+  h.style.top =
+   (r.top+r.height/2)+'px';
+
+  h.style.setProperty(
+   '--x',
+   (Math.random()*240-120)+'px'
+  );
+
+  h.style.setProperty(
+   '--y',
+   (Math.random()*-220-30)+'px'
+  );
+
+  document.body.appendChild(h);
+
+  setTimeout(
+   ()=>h.remove(),
+   1300
+  );
  }
 }
 
-/* catch game */
+
+/* =========================
+   ANNIVERSARY BURST
+========================= */
+
+function anniversaryBurst(){
+
+ const symbols =
+  ['💗','💗','🎀','✨','🌷','♡','💌'];
+
+ for(let i=0;i<35;i++){
+
+  const h =
+   document.createElement('span');
+
+  h.className='burst';
+
+  h.textContent =
+   symbols[i%symbols.length];
+
+  h.style.left =
+   (window.innerWidth/2)+'px';
+
+  h.style.top =
+   (window.innerHeight/2)+'px';
+
+  h.style.setProperty(
+   '--x',
+   (Math.random()*700-350)+'px'
+  );
+
+  h.style.setProperty(
+   '--y',
+   (Math.random()*600-300)+'px'
+  );
+
+  document.body.appendChild(h);
+
+  setTimeout(
+   ()=>h.remove(),
+   1300
+  );
+ }
+
+ toast('HAPPY 7 MONTHS, ANUUU! 💗🎀');
+}
+
+
+/* =========================
+   CATCH GAME
+========================= */
+
 let catchScore=0;
+
 function moveCatch(){
- const area=$('#catchArea'),k=$('#catchKitty');
- k.style.left=(12+Math.random()*76)+'%';k.style.top=(15+Math.random()*70)+'%';
+
+ const area=$('#catchArea');
+
+ const k=$('#catchKitty');
+
+ k.style.left =
+   (12+Math.random()*76)+'%';
+
+ k.style.top =
+   (15+Math.random()*70)+'%';
 }
-$('#catchKitty').addEventListener('click',()=>{
- catchScore++;$('#catchScore').textContent=catchScore;heartBurst({target:$('#catchKitty')});
- if(catchScore>=10){toast('You caught the sneaky kitty! 🎀');catchScore=0}
+
+
+$('#catchKitty').addEventListener(
+ 'click',
+ ()=>{
+
+  catchScore++;
+
+  $('#catchScore').textContent =
+   catchScore;
+
+  heartBurst({
+   target:$('#catchKitty')
+  });
+
+  if(catchScore>=10){
+
+   toast(
+    'You caught the anniversary kitty! 🎀'
+   );
+
+   catchScore=0;
+  }
+
+  moveCatch();
+ }
+);
+
+
+function resetCatch(){
+
+ catchScore=0;
+
+ $('#catchScore').textContent='0';
+
  moveCatch();
-});
-function resetCatch(){catchScore=0;$('#catchScore').textContent='0';moveCatch()}
-moveCatch();setInterval(()=>{if(catchScore<10)moveCatch()},1700);
+}
 
-/* feed */
+
+moveCatch();
+
+
+setInterval(()=>{
+
+ if(catchScore<10)
+  moveCatch();
+
+},1700);
+
+
+/* =========================
+   FEED GAME
+========================= */
+
 let feedScore=0;
+
 function feed(n){
- feedScore=Math.max(0,Math.min(100,feedScore+n));$('#feedScore').textContent=feedScore;$('#feedMeter').style.width=feedScore+'%';
- if(n<0)toast('She looked at you like: seriously? 😭');
- else if(feedScore>=100){toast('Maximum kitty happiness! 💗');heartBurst({target:$('#feedKitty')})}
- else toast('nom nom nom 🐾');
+
+ feedScore =
+   Math.max(
+    0,
+    Math.min(
+     100,
+     feedScore+n
+    )
+   );
+
+ $('#feedScore').textContent =
+   feedScore;
+
+ $('#feedMeter').style.width =
+   feedScore+'%';
+
+ if(n<0){
+
+  toast(
+   'She looked at you like: seriously? 😭'
+  );
+
+ }
+
+ else if(feedScore>=100){
+
+  toast(
+   'Maximum anniversary kitty happiness! 💗'
+  );
+
+  heartBurst({
+   target:$('#feedKitty')
+  });
+
+ }
+
+ else{
+
+  toast('nom nom nom 🐾');
+
+ }
+
 }
 
-/* dress */
-function dress(emoji,name){$('#outfit').textContent=name+' '+emoji+' — she approves ♡';toast(name+' equipped! 🎀')}
 
-/* hide & seek */
+/* =========================
+   DRESS GAME
+========================= */
+
+function dress(emoji,name){
+
+ $('#outfit').textContent =
+   name+' '+emoji+
+   ' — she approves ♡';
+
+ toast(
+  name+' equipped! 🎀'
+ );
+
+}
+
+
+/* =========================
+   HIDE & SEEK
+========================= */
+
 let found=0;
+
 function moveHidden(){
- const area=$('#findArea'),k=$('#hideKitty');
- k.style.left=(5+Math.random()*85)+'%';k.style.top=(8+Math.random()*72)+'%';
+
+ const area=$('#findArea');
+
+ const k=$('#hideKitty');
+
+ k.style.left =
+   (5+Math.random()*85)+'%';
+
+ k.style.top =
+   (8+Math.random()*72)+'%';
 }
-$('#hideKitty').addEventListener('click',()=>{found++;$('#findScore').textContent=found;toast('Found her! 🐱');heartBurst({target:$('#hideKitty')});moveHidden()});
+
+
+$('#hideKitty').addEventListener(
+ 'click',
+ ()=>{
+
+  found++;
+
+  $('#findScore').textContent =
+   found;
+
+  toast(
+   'Found her! 🐱💗'
+  );
+
+  heartBurst({
+   target:$('#hideKitty')
+  });
+
+  moveHidden();
+
+ }
+);
+
+
 moveHidden();
 
-/* secret */
+
+/* =========================
+   SECRET
+========================= */
+
 function unlock(){
- const val=$('#secretInput').value.trim();
+
+ const val =
+   $('#secretInput').value.trim();
+
  if(val==='030726'){
-   $('#secretContent').classList.add('show');toast('Secret unlocked ♡');heartBurst({target:$('.big-heart')});
- }else{
-   $('#secretContent').classList.remove('show');toast('Nope 😼 try again.');
+
+  $('#secretContent')
+   .classList.add('show');
+
+  toast(
+   '7 month secret unlocked ♡'
+  );
+
+  heartBurst({
+   target:$('.big-heart')
+  });
+
+ }
+
+ else{
+
+  $('#secretContent')
+   .classList.remove('show');
+
+  toast(
+   'Nope 😼 try again.'
+  );
+
  }
 }
-$('#secretInput').addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});
+
+
+$('#secretInput').addEventListener(
+ 'keydown',
+ e=>{
+  if(e.key==='Enter')
+   unlock();
+ }
+);
+
 </script>
+
 </body>
 </html>
