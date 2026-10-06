@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Seven Months With Anu ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"DM Sans",sans-serif;
+  color:#643f4d;
+  background:
+    radial-gradient(circle at 10% 10%,rgba(255,255,255,.95),transparent 25%),
+    radial-gradient(circle at 90% 20%,rgba(255,214,230,.8),transparent 28%),
+    linear-gradient(135deg,#fff7fa,#ffeef5 45%,#fff8fb);
+  overflow-x:hidden;
+}
+
+/* ---------- floating background ---------- */
+
+.bg-paw{
+  position:fixed;
+  z-index:-1;
+  opacity:.10;
+  font-size:35px;
+  animation:floatBg 12s ease-in-out infinite;
+  pointer-events:none;
+}
+
+@keyframes floatBg{
+  0%,100%{transform:translateY(0) rotate(-8deg)}
+  50%{transform:translateY(-35px) rotate(12deg)}
+}
+
+/* ---------- top nav ---------- */
+
+nav{
+  position:fixed;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:50;
+  width:min(92%,850px);
+  padding:10px 15px;
+  border:1px solid rgba(255,255,255,.8);
+  background:rgba(255,255,255,.68);
+  backdrop-filter:blur(18px);
+  border-radius:999px;
+  box-shadow:0 15px 40px rgba(190,100,130,.12);
+  display:flex;
+  justify-content:center;
+  gap:7px;
+}
+
+nav button{
+  border:0;
+  background:transparent;
+  color:#875364;
+  padding:9px 15px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:600;
+  transition:.25s;
+}
+
+nav button:hover{
+  background:#ffdce9;
+  transform:translateY(-2px);
+}
+
+/* ---------- sections ---------- */
+
+section{
+  width:min(1100px,92%);
+  margin:auto;
+  padding:110px 0;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  padding-top:130px;
+}
+
+.hero-inner{
+  max-width:850px;
+}
+
+.small-label{
+  display:inline-block;
+  background:#fff;
+  border:1px solid #f5cbd9;
+  padding:8px 17px;
+  border-radius:999px;
+  font-size:13px;
+  color:#a45e76;
+  box-shadow:0 10px 25px rgba(190,100,130,.09);
+}
+
+h1{
+  font-family:"Playfair Display",serif;
+  font-size:clamp(48px,9vw,100px);
+  line-height:.95;
+  margin:22px 0 18px;
+  color:#8f4962;
+}
+
+.hero p{
+  font-family:"Caveat",cursive;
+  font-size:clamp(24px,4vw,36px);
+  color:#a65c77;
+}
+
+.hero-kitten{
+  margin:35px auto 0;
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  background:linear-gradient(145deg,#fff,#ffdbe9);
+  box-shadow:
+    0 25px 55px rgba(187,87,120,.18),
+    inset 0 0 0 10px rgba(255,255,255,.65);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:105px;
+  animation:kittyFloat 3s ease-in-out infinite;
+  cursor:pointer;
+  position:relative;
+}
+
+.hero-kitten::after{
+  content:"♡";
+  position:absolute;
+  right:-10px;
+  top:-15px;
+  font-size:42px;
+  color:#e987aa;
+  animation:heartBeat 1.6s infinite;
+}
+
+@keyframes kittyFloat{
+  0%,100%{transform:translateY(0) rotate(-2deg)}
+  50%{transform:translateY(-12px) rotate(2deg)}
+}
+
+@keyframes heartBeat{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.25)}
+}
+
+/* ---------- headings ---------- */
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title .mini{
+  color:#db799d;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-weight:700;
+}
+
+.section-title h2{
+  font-family:"Playfair Display",serif;
+  font-size:clamp(34px,5vw,58px);
+  color:#82475c;
+  margin:8px 0;
+}
+
+.section-title p{
+  color:#9c6a79;
+}
+
+/* ---------- kitten garden ---------- */
+
+.kitten-garden{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+}
+
+.kitten-card{
+  position:relative;
+  min-height:220px;
+  background:rgba(255,255,255,.7);
+  border:1px solid #f4cfdd;
+  border-radius:28px;
+  padding:25px 18px;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(185,91,122,.09);
+  transition:.3s;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.kitten-card:hover{
+  transform:translateY(-8px) rotate(-1deg);
+  box-shadow:0 25px 50px rgba(185,91,122,.16);
+}
+
+.kitten{
+  font-size:75px;
+  display:block;
+  margin-bottom:10px;
+  transition:.3s;
+}
+
+.kitten-card:hover .kitten{
+  transform:scale(1.12) rotate(4deg);
+}
+
+.kitten-card h3{
+  color:#8d5266;
+  margin-bottom:6px;
+}
+
+.kitten-card p{
+  font-size:13px;
+  color:#aa7a88;
+}
+
+.paw{
+  position:absolute;
+  opacity:.08;
+  font-size:70px;
+  right:-10px;
+  bottom:-15px;
+}
+
+/* ---------- notes ---------- */
+
+.notes-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:22px;
+}
+
+.note{
+  min-height:230px;
+  padding:25px;
+  background:#fffafc;
+  border:1px solid #f2ccd9;
+  border-radius:25px;
+  box-shadow:0 15px 35px rgba(178,88,116,.09);
+  cursor:pointer;
+  transition:.3s;
+  position:relative;
+  overflow:hidden;
+}
+
+.note:hover{
+  transform:translateY(-7px) rotate(1deg);
+}
+
+.note .envelope{
+  font-size:45px;
+  margin-bottom:18px;
+}
+
+.note h3{
+  font-family:"Caveat",cursive;
+  font-size:27px;
+  color:#a35470;
+}
+
+.note small{
+  color:#b88996;
+}
+
+.note::after{
+  content:"♡";
+  position:absolute;
+  right:17px;
+  bottom:12px;
+  font-size:42px;
+  color:#f3cada;
+}
+
+/* ---------- modal ---------- */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(78,35,49,.35);
+  backdrop-filter:blur(10px);
+  z-index:100;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.modal-box{
+  width:min(570px,95%);
+  background:#fffafb;
+  border:1px solid #f3cbd9;
+  border-radius:32px;
+  padding:35px;
+  text-align:center;
+  box-shadow:0 30px 90px rgba(77,30,48,.22);
+  animation:pop .35s ease;
+}
+
+@keyframes pop{
+  from{transform:scale(.75) translateY(20px);opacity:0}
+  to{transform:scale(1) translateY(0);opacity:1}
+}
+
+.modal-box .big{
+  font-size:65px;
+}
+
+.modal-box h2{
+  font-family:"Playfair Display",serif;
+  color:#8c4c63;
+  margin:10px 0 15px;
+}
+
+.modal-box p{
+  line-height:1.8;
+  color:#795464;
+}
+
+.close{
+  margin-top:25px;
+  border:0;
+  background:#e994b2;
+  color:white;
+  padding:11px 22px;
+  border-radius:999px;
+  cursor:pointer;
+}
+
+/* ---------- games ---------- */
+
+.game-box{
+  background:rgba(255,255,255,.7);
+  border:1px solid #f2ccd9;
+  border-radius:35px;
+  padding:35px;
+  box-shadow:0 20px 50px rgba(177,82,113,.1);
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.game-box h3{
+  font-family:"Playfair Display",serif;
+  font-size:30px;
+  color:#8d4e64;
+}
+
+.game-box p{
+  margin:8px 0 22px;
+  color:#a27482;
+}
+
+.game-area{
+  height:280px;
+  position:relative;
+  overflow:hidden;
+  border-radius:25px;
+  background:
+    radial-gradient(circle at 20% 30%,#fff 0 4px,transparent 5px),
+    linear-gradient(#fff8fb,#ffe8f1);
+  border:1px dashed #efbfd0;
+}
+
+.heart{
+  position:absolute;
+  font-size:35px;
+  cursor:pointer;
+  user-select:none;
+  animation:fall linear;
+}
+
+@keyframes fall{
+  from{transform:translateY(-60px) rotate(0)}
+  to{transform:translateY(350px) rotate(360deg)}
+}
+
+.game-score{
+  font-weight:700;
+  color:#a1516f;
+  margin-bottom:12px;
+}
+
+.game-btn{
+  border:0;
+  background:#e98eae;
+  color:white;
+  border-radius:999px;
+  padding:12px 22px;
+  cursor:pointer;
+  font-weight:700;
+  transition:.2s;
+}
+
+.game-btn:hover{
+  transform:scale(1.04);
+  background:#dc779b;
+}
+
+/* ---------- feed game ---------- */
+
+.feed-area{
+  min-height:260px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.feed-kitty{
+  font-size:90px;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.treats{
+  display:flex;
+  gap:15px;
+  margin-top:20px;
+}
+
+.treat{
+  background:#fff;
+  border:1px solid #efc5d4;
+  width:55px;
+  height:55px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.treat:hover{
+  transform:translateY(-5px) rotate(5deg);
+}
+
+/* ---------- secret paw ---------- */
+
+.secret-paw{
+  text-align:center;
+  margin:50px 0 0;
+}
+
+.secret-paw span{
+  display:inline-flex;
+  width:75px;
+  height:75px;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#ffe1eb;
+  font-size:40px;
+  cursor:pointer;
+  box-shadow:0 12px 30px rgba(183,86,116,.12);
+  transition:.3s;
+}
+
+.secret-paw span:hover{
+  transform:scale(1.12) rotate(8deg);
+}
+
+/* ---------- final ---------- */
+
+.final{
+  text-align:center;
+  padding-bottom:130px;
+}
+
+.final-kittens{
+  font-size:70px;
+  margin-bottom:25px;
+  letter-spacing:10px;
+  animation:kittyDance 2s infinite;
+}
+
+@keyframes kittyDance{
+  0%,100%{transform:translateY(0)}
+  25%{transform:translateY(-8px) rotate(-2deg)}
+  75%{transform:translateY(-8px) rotate(2deg)}
+}
+
+.final h2{
+  font-family:"Playfair Display",serif;
+  font-size:clamp(38px,6vw,70px);
+  color:#884a61;
+}
+
+.final p{
+  max-width:700px;
+  margin:20px auto;
+  line-height:1.9;
+  color:#795464;
+}
+
+.signature{
+  font-family:"Caveat",cursive;
+  font-size:32px;
+  color:#a64f70;
+}
+
+/* ---------- floating hearts ---------- */
+
+.click-heart{
+  position:fixed;
+  pointer-events:none;
+  z-index:999;
+  font-size:22px;
+  animation:heartUp 1s ease forwards;
+}
+
+@keyframes heartUp{
+  0%{opacity:1;transform:translate(-50%,-50%) scale(.7)}
+  100%{opacity:0;transform:translate(-50%,-130px) scale(1.4)}
+}
+
+/* ---------- mobile ---------- */
+
+@media(max-width:600px){
+  nav{
+    overflow-x:auto;
+    justify-content:flex-start;
+  }
+
+  nav button{
+    white-space:nowrap;
+    padding:8px 12px;
+    font-size:12px;
+  }
+
+  section{
+    padding:85px 0;
+  }
+
+  .game-box{
+    padding:20px;
+  }
+
+  .game-area{
+    height:230px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- floating paws -->
+<div class="bg-paw" style="left:7%;top:22%">🐾</div>
+<div class="bg-paw" style="left:82%;top:15%;animation-delay:2s">🐾</div>
+<div class="bg-paw" style="left:15%;top:70%;animation-delay:4s">🐾</div>
+<div class="bg-paw" style="left:88%;top:72%;animation-delay:1s">🐾</div>
+
+<nav>
+  <button onclick="go('home')">♡ Home</button>
+  <button onclick="go('kittens')">🐾 Kittens</button>
+  <button onclick="go('notes')">💌 Notes</button>
+  <button onclick="go('games')">🎮 Games</button>
+  <button onclick="go('ending')">🎀 Us</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <span class="small-label">a tiny pink world made for Anu ♡</span>
+
+    <h1>Seven Months<br>With You</h1>
+
+    <p>
+      seven months of choosing you,<br>
+      loving you & being ridiculously lucky to have you 🎀
+    </p>
+
+    <div class="hero-kitten" onclick="kittyHello(this)">
+      🐱
+    </div>
+
+    <p style="font-size:18px;margin-top:20px;color:#b07887">
+      tap the kitten ♡
+    </p>
+  </div>
+</section>
+
+<!-- KITTENS -->
+<section id="kittens">
+  <div class="section-title">
+    <div class="mini">welcome to the kitten world</div>
+    <h2>Meet Your Little Kittens 🎀</h2>
+    <p>They have absolutely no idea how cute they are.</p>
+  </div>
+
+  <div class="kitten-garden">
+
+    <div class="kitten-card" onclick="openNote('bow')">
+      <span class="kitten">🐱🎀</span>
+      <h3>Bow Kitty</h3>
+      <p>She keeps a tiny secret for you.</p>
+      <span class="paw">🐾</span>
+    </div>
+
+    <div class="kitten-card" onclick="openNote('flower')">
+      <span class="kitten">🐱🌷</span>
+      <h3>Flower Kitty</h3>
+      <p>She brought you a flower because obviously.</p>
+      <span class="paw">🐾</span>
+    </div>
+
+    <div class="kitten-card" onclick="openNote('sleepy')">
+      <span class="kitten">😽💤</span>
+      <h3>Sleepy Kitty</h3>
+      <p>She says you deserve peaceful nights.</p>
+      <span class="paw">🐾</span>
+    </div>
+
+    <div class="kitten-card" onclick="openNote('love')">
+      <span class="kitten">😻💗</span>
+      <h3>Love Kitty</h3>
+      <p>She has way too many hearts.</p>
+      <span class="paw">🐾</span>
+    </div>
+
+    <div class="kitten-card" onclick="openNote('princess')">
+      <span class="kitten">🐱👑</span>
+      <h3>Princess Kitty</h3>
+      <p>She knows exactly who the princess is.</p>
+      <span class="paw">🐾</span>
+    </div>
+
+    <div class="kitten-card" onclick="openNote('magic')">
+      <span class="kitten">🐱✨</span>
+      <h3>Magic Kitty</h3>
+      <p>She appears whenever you need a little smile.</p>
+      <span class="paw">🐾</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- NOTES -->
+<section id="notes">
+  <div class="section-title">
+    <div class="mini">little things from my heart</div>
+    <h2>Kitten Mail 💌</h2>
+    <p>Every envelope has a tiny piece of my heart inside.</p>
+  </div>
+
+  <div class="notes-grid">
+
+    <div class="note" onclick="openNote('miss')">
+      <div class="envelope">💌</div>
+      <h3>Open when you miss me</h3>
+      <small>A little reminder...</small>
+    </div>
+
+    <div class="note" onclick="openNote('favourite')">
+      <div class="envelope">🎀</div>
+      <h3>For my favourite girl</h3>
+      <small>Just because...</small>
+    </div>
+
+    <div class="note" onclick="openNote('always')">
+      <div class="envelope">🌷</div>
+      <h3>A promise for you</h3>
+      <small>Something I mean...</small>
+    </div>
+
+    <div class="note" onclick="openNote('smile')">
+      <div class="envelope">🐾</div>
+      <h3>For your smile</h3>
+      <small>Please smile a little...</small>
+    </div>
+
+    <div class="note" onclick="openNote('seven')">
+      <div class="envelope">💗</div>
+      <h3>Seven months</h3>
+      <small>One little note...</small>
+    </div>
+
+    <div class="note" onclick="openNote('last')">
+      <div class="envelope">🎁</div>
+      <h3>One last thing...</h3>
+      <small>Don't open this too quickly.</small>
+    </div>
+
+  </div>
+</section>
+
+<!-- GAMES -->
+<section id="games">
+
+  <div class="section-title">
+    <div class="mini">kitten playground</div>
+    <h2>Let's Play 🐾</h2>
+    <p>No serious business allowed here.</p>
+  </div>
+
+  <!-- GAME 1 -->
+  <div class="game-box">
+    <h3>Catch The Hearts 💗</h3>
+    <p>Catch as many hearts as you can before they disappear!</p>
+
+    <div class="game-score">
+      Hearts caught: <span id="score">0</span>
+    </div>
+
+    <div class="game-area" id="heartGame"></div>
+
+    <button class="game-btn" onclick="startHeartGame()">
+      Start Game 🐱
+    </button>
+  </div>
+
+  <!-- GAME 2 -->
+  <div class="game-box">
+    <h3>Feed The Hungry Kitty 🧁</h3>
+    <p>She's hungry. Very hungry. Please save her dignity.</p>
+
+    <div class="feed-area">
+      <div class="feed-kitty" id="feedKitty">🐱</div>
+
+      <div class="treats">
+        <div class="treat" onclick="feed('🍰')">🍰</div>
+        <div class="treat" onclick="feed('🧁')">🧁</div>
+        <div class="treat" onclick="feed('🍓')">🍓</div>
+      </div>
+
+      <p id="feedMessage" style="margin-top:18px">
+        Choose a treat for her ♡
+      </p>
+    </div>
+  </div>
+
+  <!-- GAME 3 -->
+  <div class="game-box">
+    <h3>Find The Hidden Kitty 🐾</h3>
+    <p>There is a tiny kitty hiding somewhere below...</p>
+
+    <div class="game-area" id="hiddenGame">
+      <div
+        id="hiddenKitty"
+        style="
+          position:absolute;
+          font-size:40px;
+          cursor:pointer;
+          left:70%;
+          top:35%;
+          transition:.3s;
+        "
+        onclick="foundKitty()"
+      >🐱</div>
+    </div>
+
+    <button class="game-btn" onclick="moveKitty()">
+      Hide Kitty Again 🐾
+    </button>
+
+    <p id="foundMessage" style="margin-top:15px">
+      Find her!
+    </p>
+  </div>
+
+</section>
+
+<!-- SECRET -->
+<section>
+  <div class="section-title">
+    <div class="mini">there might be something hidden...</div>
+    <h2>A Tiny Secret 🐾</h2>
+    <p>Some things are easier to find when you look carefully.</p>
+  </div>
+
+  <div class="secret-paw">
+    <span onclick="secret()">🐾</span>
+    <p style="margin-top:15px;color:#a47785">
+      maybe touch the paw...
+    </p>
+  </div>
+</section>
+
+<!-- END -->
+<section class="final" id="ending">
+
+  <div class="final-kittens">
+    🐱 🎀 🐱 💗 🐱 🌷
+  </div>
+
+  <h2>Happy 7 Months, Anu ♡</h2>
+
+  <p>
+    Seven months might just be a number to someone else,
+    but to me it's seven months of having you in my life,
+    seven months of caring about you,
+    seven months of choosing you,
+    and seven months of having someone who means more to me
+    than I can properly put into words.
+  </p>
+
+  <p>
+    I know I'm not perfect and I know there have been moments
+    when I've made mistakes, but one thing I never want you
+    to doubt is how much you mean to me.
+    I want to keep learning you, understanding you,
+    caring for you and making this little "us" better.
+  </p>
+
+  <p>
+    So here's to our seven months,
+    to all the silly conversations,
+    all the tiny moments,
+    all the laughs,
+    all the love,
+    and to every little chapter still waiting for us.
+  </p>
+
+  <div class="signature">
+    always your person, Varun ♡
+  </div>
+
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeOutside(event)">
+  <div class="modal-box">
+    <div class="big" id="modalEmoji">💌</div>
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+    <button class="close" onclick="closeModal()">Close with a paw ♡</button>
+  </div>
+</div>
+
+<script>
+
+/* ---------- navigation ---------- */
+
+function go(id){
+  document.getElementById(id).scrollIntoView({
+    behavior:"smooth"
+  });
+}
+
+/* ---------- notes ---------- */
+
+const notes = {
+
+  bow:{
+    emoji:"🎀",
+    title:"A little bow for you",
+    text:"If I could put a tiny bow on every good thing in my life, you'd probably have the biggest one. You make ordinary moments feel softer, warmer and a little more special. I'm really lucky that I get to call you mine. ♡"
+  },
+
+  flower:{
+    emoji:"🌷",
+    title:"A flower for Anu",
+    text:"I hope you always remember that you don't have to be perfect for me to love and care about you. You can have quiet days, difficult days, silly days and everything in between. I'll still want to be beside you through them."
+  },
+
+  sleepy:{
+    emoji:"😽",
+    title:"For your sleepy little heart",
+    text:"Whenever life feels too loud, I hope you give yourself permission to rest. You don't always have to have everything figured out. Sleep peacefully, take care of yourself and remember that somewhere, someone is always wishing the sweetest things for you. ♡"
+  },
+
+  love:{
+    emoji:"😻",
+    title:"Too many hearts",
+    text:"I tried putting all my love into one little note and the kitten said it wasn't enough space. So apparently we're going to need an entire website. 😭💗"
+  },
+
+  princess:{
+    emoji:"👑",
+    title:"For my princess",
+    text:"You deserve softness, patience, reassurance and a love that doesn't make you question whether you're important. I hope I can keep giving you more of that every day."
+  },
+
+  magic:{
+    emoji:"✨",
+    title:"A little magic",
+    text:"You have this funny little way of making my day better just by being there. Sometimes I don't even need a big conversation. Knowing you're there is enough to make things feel a little lighter."
+  },
+
+  miss:{
+    emoji:"💌",
+    title:"When you miss me",
+    text:"If you're reading this because you miss me, then come here, tiny virtual hug 🫂. I may not always be right beside you, but my care for you doesn't disappear just because there's distance between us. Close your eyes for a second and imagine the biggest, warmest hug."
+  },
+
+  favourite:{
+    emoji:"🎀",
+    title:"My favourite girl",
+    text:"Out of all the people I could have met, somehow I got you. And honestly, I'm very happy about that. You're one of the most precious parts of my life and I hope you never forget how loved and appreciated you are."
+  },
+
+  always:{
+    emoji:"🌷",
+    title:"Something I promise",
+    text:"I can't promise that every day will always be perfect, because we're both human and life can be messy. But I can promise that I'll keep caring, keep listening, keep learning from my mistakes and keep choosing what is best for us."
+  },
+
+  smile:{
+    emoji:"🐾",
+    title:"Please smile",
+    text:"Hey you. Yes, you. Stop for a second and smile. Even if it's a tiny one. There. Much better. Now your kitten has officially completed today's mission. 🐱🎀"
+  },
+
+  seven:{
+    emoji:"💗",
+    title:"Seven months",
+    text:"Happy seven months, Anu. Thank you for staying beside me, for caring about me and for giving me so many little reasons to smile. Seven months with you has become something I genuinely treasure, and I hope we get to keep making this little world of ours sweeter."
+  },
+
+  last:{
+    emoji:"🎁",
+    title:"One last thing...",
+    text:"If you ever wonder what my favourite part of this entire little website is, it's not the games, the kittens or all the pink decorations. It's the person this whole thing was made for. You. ♡"
+  }
+
+};
+
+function openNote(type){
+  const n=notes[type];
+
+  document.getElementById("modalEmoji").textContent=n.emoji;
+  document.getElementById("modalTitle").textContent=n.title;
+  document.getElementById("modalText").textContent=n.text;
+
+  document.getElementById("modal").classList.add("show");
+}
+
+function closeModal(){
+  document.getElementById("modal").classList.remove("show");
+}
+
+function closeOutside(e){
+  if(e.target.id==="modal") closeModal();
+}
+
+/* ---------- hero kitten ---------- */
+
+function kittyHello(el){
+
+  const messages=[
+    "mrrp! 💗",
+    "Anu is very loved 🎀",
+    "meow meow ♡",
+    "seven months!! 🐾",
+    "you found me 😭💗"
+  ];
+
+  const msg=messages[Math.floor(Math.random()*messages.length)];
+
+  el.innerHTML="😽";
+
+  setTimeout(()=>{
+    el.innerHTML="🐱";
+  },900);
+
+  createHeart(
+    window.innerWidth/2,
+    window.innerHeight/2
+  );
+
+  setTimeout(()=>{
+    alert(msg);
+  },250);
+}
+
+/* ---------- hearts game ---------- */
+
+let score=0;
+let gameRunning=false;
+let heartTimer;
+
+function startHeartGame(){
+
+  if(gameRunning) return;
+
+  score=0;
+  document.getElementById("score").textContent=score;
+  gameRunning=true;
+
+  const area=document.getElementById("heartGame");
+
+  heartTimer=setInterval(()=>{
+
+    if(!gameRunning){
+      clearInterval(heartTimer);
+      return;
+    }
+
+    const heart=document.createElement("div");
+
+    heart.className="heart";
+
+    const hearts=["💗","💕","💖","💞","♡"];
+
+    heart.textContent=
+      hearts[Math.floor(Math.random()*hearts.length)];
+
+    heart.style.left=
+      Math.random()*90+"%";
+
+    heart.style.animationDuration=
+      (2.5+Math.random()*2)+"s";
+
+    heart.onclick=()=>{
+
+      score++;
+
+      document.getElementById("score").textContent=score;
+
+      createHeart(
+        event.clientX,
+        event.clientY
+      );
+
+      heart.remove();
+
+      if(score>=15){
+        gameRunning=false;
+        clearInterval(heartTimer);
+
+        setTimeout(()=>{
+          openNote("seven");
+        },300);
+      }
+    };
+
+    area.appendChild(heart);
+
+    setTimeout(()=>{
+      heart.remove();
+    },5000);
+
+  },450);
+
+  setTimeout(()=>{
+    if(gameRunning){
+      gameRunning=false;
+      clearInterval(heartTimer);
+      alert("Time's up! 🐱💗 You caught "+score+" hearts!");
+    }
+  },15000);
+}
+
+/* ---------- feed game ---------- */
+
+function feed(food){
+
+  const kitty=document.getElementById("feedKitty");
+  const msg=document.getElementById("feedMessage");
+
+  if(food==="🍓"){
+    kitty.textContent="😻";
+    msg.textContent="She LOVES strawberries!! 🍓💗";
+  }
+
+  if(food==="🧁"){
+    kitty.textContent="🥹";
+    msg.textContent="The cupcake was apparently life-changing. 🎀";
+  }
+
+  if(food==="🍰"){
+    kitty.textContent="😽";
+    msg.textContent="Tiny kitty is very happy now. ♡";
+  }
+
+  kitty.style.transform="scale(1.2) rotate(8deg)";
+
+  setTimeout(()=>{
+    kitty.style.transform="scale(1)";
+  },400);
+}
+
+/* ---------- hidden kitty ---------- */
+
+function moveKitty(){
+
+  const kitty=document.getElementById("hiddenKitty");
+  const area=document.getElementById("hiddenGame");
+
+  const x=Math.random()*80+5;
+  const y=Math.random()*70+10;
+
+  kitty.style.left=x+"%";
+  kitty.style.top=y+"%";
+
+  document.getElementById("foundMessage").textContent=
+    "hehe... she moved 🐾 find her";
+}
+
+function foundKitty(){
+
+  const msg=document.getElementById("foundMessage");
+
+  msg.textContent=
+    "YOU FOUND HER!! 😭🎀 She gives you a tiny paw hug.";
+
+  createHeart(
+    window.innerWidth/2,
+    window.innerHeight/2
+  );
+
+  setTimeout(()=>{
+    openNote("smile");
+  },500);
+}
+
+/* ---------- secret ---------- */
+
+function secret(){
+
+  for(let i=0;i<12;i++){
+
+    setTimeout(()=>{
+
+      createHeart(
+        Math.random()*window.innerWidth,
+        Math.random()*window.innerHeight
+      );
+
+    },i*100);
+
+  }
+
+  setTimeout(()=>{
+    openNote("last");
+  },700);
+}
+
+/* ---------- click hearts ---------- */
+
+document.addEventListener("click",(e)=>{
+
+  if(
+    e.target.tagName==="BUTTON" ||
+    e.target.closest(".note") ||
+    e.target.closest(".kitten-card") ||
+    e.target.closest(".treat")
+  ) return;
+
+  if(Math.random()<.35){
+    createHeart(e.clientX,e.clientY);
+  }
+
+});
+
+function createHeart(x,y){
+
+  const h=document.createElement("div");
+
+  h.className="click-heart";
+
+  const arr=["♡","💗","💕","🌸","🐾"];
+
+  h.textContent=
+    arr[Math.floor(Math.random()*arr.length)];
+
+  h.style.left=x+"px";
+  h.style.top=y+"px";
+
+  document.body.appendChild(h);
+
+  setTimeout(()=>{
+    h.remove();
+  },1000);
+}
+
+/* ---------- random kitten popups ---------- */
+
+setInterval(()=>{
+
+  if(Math.random()<.35){
+
+    const kitty=document.createElement("div");
+
+    kitty.textContent=
+      ["🐱","😽","🐾","🎀🐱","🐱💗"]
+      [Math.floor(Math.random()*5)];
+
+    kitty.style.position="fixed";
+    kitty.style.bottom="10px";
+    kitty.style.left="-70px";
+    kitty.style.fontSize="45px";
+    kitty.style.zIndex="40";
+    kitty.style.transition="left 5s linear";
+    kitty.style.pointerEvents="none";
+
+    document.body.appendChild(kitty);
+
+    requestAnimationFrame(()=>{
+      kitty.style.left="110%";
+    });
+
+    setTimeout(()=>{
+      kitty.remove();
+    },5500);
+  }
+
+},9000);
+
+</script>
+
+</body>
+</html>
