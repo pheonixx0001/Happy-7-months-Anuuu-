@@ -2,1049 +2,1592 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>For Ananta ♡</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For Anu — Seven Months</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap');
-
-:root{
-  --pink:#f6cbd8;
-  --pink2:#fde9ee;
-  --cream:#fff9f3;
-  --wine:#64283e;
-  --rose:#bd607c;
-  --brown:#563d43;
-  --white:#fff;
-}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
 body{
- margin:0;background:var(--cream);color:var(--brown);
- font-family:"DM Sans",sans-serif;overflow-x:hidden
+  font-family:"Trebuchet MS",sans-serif;
+  background:#f9e9ed;
+  color:#5b3b43;
 }
-button{font:inherit;cursor:pointer}
-section{padding:100px 6%}
-.wrap{max-width:1150px;margin:auto}
-h1,h2,h3{font-family:"Cormorant Garamond",serif;color:var(--wine)}
-h2{font-size:65px;margin:8px 0}
-p{line-height:1.8}
 
-nav{
- position:fixed;z-index:50;top:15px;left:50%;transform:translateX(-50%);
- width:min(920px,92%);padding:10px 16px;border-radius:50px;
- background:#fff9f3dd;backdrop-filter:blur(15px);
- box-shadow:0 10px 35px #64283e15;
- display:flex;justify-content:space-between;align-items:center
+button{
+  font:inherit;
+  border:0;
+  cursor:pointer;
 }
-.logo{font:700 26px "Cormorant Garamond";color:var(--wine)}
-nav a{color:var(--wine);text-decoration:none;font-size:12px;font-weight:700;margin:0 7px}
 
-.hero{
- min-height:100vh;display:grid;place-items:center;
- background:
- radial-gradient(circle at 15% 30%,#f7d9e2 0 12%,transparent 35%),
- radial-gradient(circle at 90% 75%,#f1dfc9 0 12%,transparent 32%),
- var(--cream);
+#world{
+  width:100vw;
+  height:100vh;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(#f8dfe6 0 63%,#dcb8a5 63% 100%);
 }
-.heroGrid{
- max-width:1150px;width:100%;display:grid;
- grid-template-columns:1fr 1fr;gap:50px;align-items:center
-}
-.kicker{font:26px Caveat;color:var(--rose)}
-.hero h1{font-size:clamp(70px,9vw,125px);line-height:.78;margin:18px 0}
-.hero p{max-width:570px;color:#765f67}
-.btn{
- border:0;border-radius:50px;padding:14px 23px;
- background:var(--wine);color:white;font-weight:700;
- box-shadow:0 12px 25px #64283e25;transition:.25s
-}
-.btn:hover{transform:translateY(-3px)}
-.btn.alt{background:white;color:var(--wine);border:1px solid #ead5da;box-shadow:none}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
 
-/* ---------- KITTEN SYSTEM ---------- */
+/* ---------------- ROOM ---------------- */
+
+.wall{
+  position:absolute;
+  inset:0 0 37%;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.45) 0 2px,transparent 3px),
+    radial-gradient(circle at 70% 40%,rgba(255,255,255,.35) 0 2px,transparent 3px),
+    #f8dce5;
+  background-size:80px 80px;
+}
+
+.floor{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:37%;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #d7b09e 0 85px,
+      #c99f8e 86px 88px
+    );
+}
+
+.ceiling{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:20px;
+  background:#fff3ef;
+}
+
+/* window */
+
+.window{
+  position:absolute;
+  width:250px;
+  height:210px;
+  top:55px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#9bd7e6;
+  border:14px solid #fff3ef;
+  box-shadow:0 15px 35px rgba(100,65,70,.16);
+  overflow:hidden;
+}
+
+.window:before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  width:10px;
+  height:100%;
+  background:#fff3ef;
+  transform:translateX(-50%);
+}
+
+.window:after{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:0;
+  width:100%;
+  height:10px;
+  background:#fff3ef;
+  transform:translateY(-50%);
+}
+
+.moon{
+  position:absolute;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:#fff6cf;
+  right:28px;
+  top:20px;
+  box-shadow:0 0 25px #fff4bd;
+}
+
+.cloud{
+  position:absolute;
+  width:80px;
+  height:25px;
+  border-radius:30px;
+  background:#eaf8fa;
+  left:25px;
+  bottom:38px;
+}
+
+/* curtains */
+
+.curtain{
+  position:absolute;
+  top:35px;
+  width:85px;
+  height:245px;
+  background:#d98da8;
+  z-index:3;
+}
+
+.curtain.left{
+  left:calc(50% - 190px);
+  border-radius:0 0 50px 20px;
+  transform:skewY(3deg);
+}
+
+.curtain.right{
+  right:calc(50% - 190px);
+  border-radius:0 0 20px 50px;
+  transform:skewY(-3deg);
+}
+
+/* rug */
+
+.rug{
+  position:absolute;
+  width:530px;
+  height:190px;
+  bottom:40px;
+  left:50%;
+  transform:translateX(-50%);
+  border-radius:50%;
+  background:#f2c6d2;
+  border:8px solid #fff0ef;
+  box-shadow:inset 0 0 0 5px #e9aebf;
+}
+
+/* ---------------- FURNITURE ---------------- */
+
+.bed{
+  position:absolute;
+  left:6%;
+  bottom:19%;
+  width:340px;
+  height:210px;
+  z-index:5;
+}
+
+.headboard{
+  position:absolute;
+  left:0;
+  top:0;
+  width:70px;
+  height:190px;
+  border-radius:35px 35px 8px 8px;
+  background:#fff1ed;
+  border:6px solid #d69baa;
+}
+
+.mattress{
+  position:absolute;
+  left:45px;
+  bottom:15px;
+  width:285px;
+  height:90px;
+  background:#fff7f3;
+  border-radius:35px 35px 20px 20px;
+  box-shadow:0 10px 0 #d29aaa;
+}
+
+.blanket{
+  position:absolute;
+  right:5px;
+  bottom:15px;
+  width:145px;
+  height:82px;
+  border-radius:0 35px 20px 20px;
+  background:#e9b3c6;
+}
+
+.pillow{
+  position:absolute;
+  left:70px;
+  bottom:70px;
+  width:100px;
+  height:48px;
+  border-radius:30px;
+  background:#fff;
+}
+
+/* shelf */
+
+.shelf{
+  position:absolute;
+  right:7%;
+  top:100px;
+  width:250px;
+  height:220px;
+  z-index:3;
+}
+
+.shelf .board{
+  position:absolute;
+  width:100%;
+  height:15px;
+  background:#b98178;
+  border-radius:8px;
+}
+
+.board:nth-child(1){top:0}
+.board:nth-child(2){top:70px}
+.board:nth-child(3){top:140px}
+.board:nth-child(4){top:210px}
+
+.plant{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  width:55px;
+  height:60px;
+  background:#d49a88;
+  border-radius:5px 5px 20px 20px;
+}
+
+.plant:before,
+.plant:after{
+  content:"";
+  position:absolute;
+  width:45px;
+  height:70px;
+  background:#8dbf9b;
+  border-radius:100% 0;
+}
+
+.plant:before{left:15px;bottom:35px}
+.plant:after{right:15px;bottom:35px;transform:rotate(50deg)}
+
+.book{
+  position:absolute;
+  width:40px;
+  height:48px;
+  border-radius:3px;
+  bottom:84px;
+  background:#c67e98;
+  transform:rotate(-5deg);
+}
+
+.book.two{
+  left:50px;
+  bottom:84px;
+  background:#9b829f;
+  transform:rotate(4deg);
+}
+
+.star-lamp{
+  position:absolute;
+  right:85px;
+  bottom:155px;
+  font-size:0;
+}
+
+.star-lamp:before{
+  content:"";
+  display:block;
+  width:45px;
+  height:45px;
+  background:#ffe5a3;
+  clip-path:polygon(
+    50% 0,61% 35%,98% 35%,68% 57%,
+    79% 95%,50% 72%,21% 95%,32% 57%,
+    2% 35%,39% 35%
+  );
+  filter:drop-shadow(0 0 18px #ffe5a3);
+}
+
+/* vanity */
+
+.vanity{
+  position:absolute;
+  right:6%;
+  bottom:17%;
+  width:260px;
+  height:170px;
+  z-index:5;
+}
+
+.vtable{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:80px;
+  background:#f6ded8;
+  border-radius:15px;
+}
+
+.mirror{
+  position:absolute;
+  width:130px;
+  height:100px;
+  left:65px;
+  top:-75px;
+  border:9px solid #d39ba4;
+  border-radius:60% 60% 50% 50%;
+  background:#b8e0e8;
+}
+
+.mirror:after{
+  content:"";
+  position:absolute;
+  width:35px;
+  height:12px;
+  border-radius:50%;
+  background:rgba(255,255,255,.65);
+  left:22px;
+  top:25px;
+  transform:rotate(-35deg);
+}
+
+.bottle{
+  position:absolute;
+  bottom:65px;
+  width:20px;
+  height:35px;
+  border-radius:5px;
+  background:#d889a1;
+}
+
+.bottle.one{left:30px}
+.bottle.two{left:58px;background:#a889b6}
+.bottle.three{right:30px;background:#e8b17d}
+
+/* ---------------- KITTENS ---------------- */
 
 .kitten{
- width:260px;height:300px;
- animation:kittyFloat 4s ease-in-out infinite;
-}
-.kitten svg{width:100%;height:100%;overflow:visible}
-@keyframes kittyFloat{
- 50%{transform:translateY(-12px) rotate(2deg)}
-}
-.kitten.jump{animation:jump .45s ease}
-@keyframes jump{
- 50%{transform:translateY(-28px) rotate(-7deg) scale(1.05)}
+  position:absolute;
+  width:115px;
+  height:120px;
+  z-index:20;
+  cursor:pointer;
+  transition:.25s;
+  animation:floaty 3s ease-in-out infinite;
 }
 
-.heroKittenBox{
- width:min(440px,100%);height:530px;
- border-radius:240px 240px 40px 40px;
- background:linear-gradient(145deg,#fff,#f7dce4);
- border:9px solid white;
- box-shadow:0 25px 70px #64283e20;
- display:grid;place-items:center;
- position:relative
-}
-.heroKittenBox:after{
- content:"ANU'S LITTLE WORLD";
- position:absolute;bottom:30px;
- font:22px Caveat;color:#a55770
+.kitten:hover{
+  transform:scale(1.08) translateY(-5px);
 }
 
-/* kitten garden */
-.garden{background:#f6e4df}
-.center{text-align:center;margin-bottom:45px}
-.center p{max-width:650px;margin:auto;color:#806b71}
+@keyframes floaty{
+  0%,100%{translate:0 0}
+  50%{translate:0 -7px}
+}
 
-.kittens{
- display:grid;grid-template-columns:repeat(4,1fr);gap:20px
+.cat-body{
+  position:absolute;
+  width:75px;
+  height:55px;
+  bottom:4px;
+  left:20px;
+  border-radius:45px 45px 25px 25px;
+  background:#f3d4ca;
+  border:3px solid #6d4d51;
 }
-.kcard{
- background:#fffaf6;border-radius:35px;padding:25px 10px 20px;
- text-align:center;border:3px solid white;
- box-shadow:0 15px 40px #64283e10;
- transition:.3s;position:relative;overflow:hidden
+
+.cat-head{
+  position:absolute;
+  width:75px;
+  height:70px;
+  left:20px;
+  top:8px;
+  border-radius:50%;
+  background:#f6dcd3;
+  border:3px solid #6d4d51;
+  z-index:3;
 }
-.kcard:hover{transform:translateY(-12px) rotate(-1deg)}
-.kcard h3{font-size:32px;margin:5px}
-.kcard small{color:#9d6072}
-.kcard .kitten{width:190px;height:220px;margin:auto}
+
+.ear{
+  position:absolute;
+  width:32px;
+  height:38px;
+  background:#f6dcd3;
+  border:3px solid #6d4d51;
+  top:-19px;
+  border-radius:80% 10% 20% 10%;
+  z-index:-1;
+}
+
+.ear.left{left:1px;transform:rotate(-25deg)}
+.ear.right{right:1px;transform:rotate(25deg)}
+
+.eye{
+  position:absolute;
+  width:9px;
+  height:13px;
+  border-radius:50%;
+  background:#4c3940;
+  top:29px;
+}
+
+.eye.left{left:19px}
+.eye.right{right:19px}
+
+.nose{
+  position:absolute;
+  left:50%;
+  top:43px;
+  transform:translateX(-50%);
+  width:9px;
+  height:7px;
+  border-radius:50%;
+  background:#a85e72;
+}
+
+.mouth{
+  position:absolute;
+  left:50%;
+  top:48px;
+  width:20px;
+  height:10px;
+  transform:translateX(-50%);
+  border-bottom:2px solid #6d4d51;
+  border-radius:50%;
+}
+
+.blush{
+  position:absolute;
+  width:13px;
+  height:7px;
+  border-radius:50%;
+  background:#ef9daf;
+  top:45px;
+  opacity:.7;
+}
+
+.blush.left{left:8px}
+.blush.right{right:8px}
+
+.tail{
+  position:absolute;
+  right:0;
+  bottom:28px;
+  width:48px;
+  height:35px;
+  border:7px solid #6d4d51;
+  border-left:0;
+  border-bottom:0;
+  border-radius:0 35px 0 0;
+  transform:rotate(20deg);
+}
 
 .paw{
- position:absolute;width:12px;height:12px;border-radius:50%;
- background:#eeb5c5;opacity:.6
-}
-.p1{left:8%;top:20%}.p2{right:10%;top:35%}.p3{left:15%;bottom:15%}
-
-/* CAT CAFE */
-.cafe{
- background:#fff7f1
-}
-.cafeScene{
- min-height:500px;border-radius:40px;
- background:linear-gradient(#f8dfe4 0 62%,#d7b49c 62%);
- position:relative;overflow:hidden;
- border:10px solid white;box-shadow:0 25px 60px #64283e18
-}
-.cafeWindow{
- position:absolute;left:45px;top:45px;width:170px;height:150px;
- background:#cde6ed;border:15px solid #fff3ec;
- box-shadow:inset 0 0 0 4px #d3b8ae
-}
-.cafeWindow:before{
- content:"";position:absolute;left:50%;height:100%;width:5px;background:white
-}
-.cafeWindow:after{
- content:"";position:absolute;top:50%;width:100%;height:5px;background:white
-}
-.counter{
- position:absolute;right:35px;bottom:95px;width:270px;height:100px;
- background:#9c655b;border-radius:18px
-}
-.counter:after{
- content:"";position:absolute;left:-10px;right:-10px;top:-15px;height:20px;
- background:#f4d8c9;border-radius:10px
-}
-.cafeKitty{
- position:absolute;left:48%;bottom:48px;transform:translateX(-50%)
-}
-.cafeKitty .kitten{width:220px;height:255px}
-.cafeText{
- position:absolute;left:35px;bottom:35px;
- font:28px Caveat;color:#fff
+  position:absolute;
+  width:20px;
+  height:12px;
+  border-radius:50%;
+  background:#f6dcd3;
+  border:3px solid #6d4d51;
+  bottom:0;
 }
 
-/* LETTERS */
-.letters{background:#fffaf5}
-.letterGrid{
- display:grid;grid-template-columns:repeat(3,1fr);gap:20px
-}
-.letter{
- background:white;border:1px solid #eddcdf;border-radius:25px;
- padding:30px;min-height:220px;
- box-shadow:0 12px 35px #64283e0d;
- transition:.25s
-}
-.letter:hover{transform:translateY(-7px)}
-.letter h3{font-size:32px;margin:0 0 12px}
-.letter p{font-size:14px;color:#735f66}
-.hand{font:22px Caveat;color:#b55c76}
+.paw.one{left:30px}
+.paw.two{left:66px}
 
-/* ---------- GAMES ---------- */
-.arcade{
- background:#f3e0e6
-}
-.gameGrid{
- display:grid;grid-template-columns:1fr 1fr;gap:25px
-}
-.game{
- background:#fff;border-radius:32px;padding:28px;
- box-shadow:0 20px 45px #64283e12;
- min-height:400px;overflow:hidden
-}
-.game h3{font-size:38px;margin:0}
-.gameDesc{color:#806970;font-size:13px}
-
-/* runaway kitty */
-.runArea{
- height:245px;border-radius:25px;
- background:#fff1f4;position:relative;overflow:hidden;
- border:2px dashed #e6bdc9;margin-top:15px
-}
-.runningKitty{
- position:absolute;width:120px;height:135px;
- transition:.18s;cursor:pointer
-}
-.score{font-weight:700;color:var(--wine);margin-top:10px}
-
-/* feeding */
-.feedScene{
- height:245px;border-radius:25px;background:#f9eee4;
- display:flex;align-items:center;justify-content:center;
- position:relative
-}
-.foods{
- display:flex;justify-content:center;gap:12px;margin-top:15px
-}
-.food{
- border:0;background:#f6d3dc;border-radius:20px;
- width:70px;height:60px;font-size:28px
-}
-.food:hover{transform:scale(1.1)}
-.happy{animation:happy .5s ease}
-@keyframes happy{
- 50%{transform:translateY(-18px) rotate(7deg)}
+.bow{
+  position:absolute;
+  z-index:8;
+  top:4px;
+  left:12px;
+  width:28px;
+  height:20px;
 }
 
-/* dressup */
-.dressScene{
- height:245px;background:#f6e8ef;border-radius:25px;
- display:grid;place-items:center;position:relative
-}
-.dressScene .kitten{width:190px;height:220px}
-.accessories{
- display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap
-}
-.accessories button{
- border:0;background:#f1ccd8;color:var(--wine);
- border-radius:20px;padding:9px 13px;font-weight:700
+.bow:before,.bow:after{
+  content:"";
+  position:absolute;
+  width:17px;
+  height:17px;
+  background:#c75d83;
+  border:2px solid #6d4d51;
+  border-radius:70% 10%;
 }
 
-/* hidden kitten */
-.hideScene{
- height:245px;border-radius:25px;background:#f0e1d6;
- position:relative;overflow:hidden
-}
-.hideBox{
- position:absolute;width:75px;height:75px;background:#c48b72;
- border-radius:10px;cursor:pointer
-}
-.hideKitty{
- position:absolute;width:100px;height:120px;
- display:none;cursor:pointer
+.bow:before{left:-4px;transform:rotate(20deg)}
+.bow:after{right:-4px;transform:rotate(70deg)}
+
+.crown{
+  position:absolute;
+  top:-29px;
+  left:22px;
+  width:32px;
+  height:25px;
+  background:#f3c96b;
+  clip-path:polygon(0 100%,10% 0,38% 55%,52% 0,70% 55%,100% 0,90% 100%);
+  border:2px solid #8d6338;
 }
 
-/* SAFE */
-.safeSection{background:#492130;color:white}
-.safeSection h2{color:white}
-.safeBox{
- max-width:650px;margin:auto;background:#682f45;
- padding:35px;border-radius:35px;
- border:1px solid #a9637b;box-shadow:0 30px 80px #16091080
-}
-.pin{
- width:100%;height:55px;background:#421a28;
- border:1px solid #a76179;color:white;
- border-radius:15px;text-align:center;
- font-size:24px;letter-spacing:8px
-}
-.keypad{
- display:grid;grid-template-columns:repeat(3,1fr);
- gap:9px;margin-top:15px
-}
-.keypad button{
- height:48px;border:0;border-radius:12px;
- background:#8b4a61;color:white;font-weight:700
-}
-.secret{
- display:none;background:#fff6ef;color:#59313e;
- padding:30px;border-radius:28px;margin-top:20px
-}
-.secret.show{display:block;animation:reveal .7s}
-@keyframes reveal{
- from{opacity:0;transform:translateY(20px)}
- to{opacity:1;transform:none}
+.cat2 .cat-head,.cat2 .cat-body{background:#f1eee8}
+.cat2 .ear{background:#f1eee8}
+.cat2 .paw{background:#f1eee8}
+
+.cat3 .cat-head,.cat3 .cat-body{background:#c9a795}
+.cat3 .ear{background:#c9a795}
+.cat3 .paw{background:#c9a795}
+
+.cat4 .cat-head,.cat4 .cat-body{background:#eee5ce}
+.cat4 .ear{background:#eee5ce}
+.cat4 .paw{background:#eee5ce}
+
+.cat4 .eye{height:3px;top:34px;border-radius:100%}
+
+/* kitten positions */
+
+.k1{left:26%;bottom:23%;transform:scale(.9)}
+.k2{left:42%;bottom:25%;transform:scale(.72)}
+.k3{right:28%;bottom:25%;transform:scale(.85)}
+.k4{right:17%;bottom:38%;transform:scale(.65)}
+
+/* ---------------- UI ---------------- */
+
+.title{
+  position:absolute;
+  top:25px;
+  left:35px;
+  z-index:50;
 }
 
-/* END */
-.end{
- min-height:75vh;display:grid;place-items:center;text-align:center
+.title h1{
+  margin:0;
+  font-family:Georgia,serif;
+  font-size:clamp(28px,4vw,48px);
+  color:#713f4c;
 }
-.end h2{font-size:90px;line-height:.8}
-.end p{max-width:620px;color:#77636a;margin:auto}
 
-.modal{
- position:fixed;inset:0;background:#30151dcc;
- backdrop-filter:blur(8px);z-index:100;
- display:none;place-items:center;padding:20px
+.title p{
+  margin:5px 0;
+  color:#95606e;
 }
-.modal.show{display:grid}
-.modalBox{
- max-width:550px;width:100%;background:#fff9f3;
- border-radius:35px;padding:40px;text-align:center;
- position:relative
+
+.pawmenu{
+  position:absolute;
+  right:30px;
+  top:25px;
+  z-index:80;
+  background:#fff8f5;
+  border:3px solid #d99bab;
+  border-radius:30px;
+  padding:12px 20px;
+  color:#74434f;
+  box-shadow:0 8px 20px rgba(100,60,70,.15);
 }
+
+.sign{
+  position:absolute;
+  left:50%;
+  bottom:14px;
+  transform:translateX(-50%);
+  background:#fff5ee;
+  border:4px solid #b87884;
+  padding:8px 30px;
+  border-radius:8px;
+  z-index:60;
+  font-family:Georgia,serif;
+}
+
+/* ---------------- OVERLAY ---------------- */
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(60,30,40,.52);
+  backdrop-filter:blur(8px);
+  z-index:100;
+  display:none;
+  align-items:center;
+  justify-content:center;
+}
+
+.overlay.show{display:flex}
+
+.panel{
+  width:min(850px,92vw);
+  max-height:90vh;
+  overflow:auto;
+  background:#fff8f4;
+  border:5px solid #d89aaa;
+  border-radius:35px;
+  padding:35px;
+  box-shadow:0 30px 80px rgba(50,20,30,.3);
+  position:relative;
+}
+
 .close{
- position:absolute;right:15px;top:15px;border:0;
- width:38px;height:38px;border-radius:50%;
- background:#f4d5de;color:var(--wine)
+  position:absolute;
+  right:18px;
+  top:15px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#e6a7b8;
+  color:white;
+  font-size:20px;
 }
-.toast{
- position:fixed;z-index:150;left:50%;bottom:25px;
- transform:translate(-50%,100px);
- background:var(--wine);color:white;
- padding:13px 20px;border-radius:50px;
- transition:.3s
-}
-.toast.show{transform:translate(-50%,0)}
 
-@media(max-width:850px){
- .heroGrid,.gameGrid{grid-template-columns:1fr}
- .hero{text-align:center}
- .hero p{margin:auto}
- .actions{justify-content:center}
- .kittens{grid-template-columns:1fr 1fr}
- .letterGrid{grid-template-columns:1fr}
+.panel h2{
+  font-family:Georgia,serif;
+  color:#783f50;
+  font-size:34px;
+  margin-top:0;
 }
-@media(max-width:520px){
- section{padding:75px 5%}
- nav a{display:none}
- .kittens{grid-template-columns:1fr 1fr}
- .kcard .kitten{width:140px;height:170px}
- h2{font-size:50px}
- .hero h1{font-size:72px}
- .heroKittenBox{height:430px}
+
+/* ---------------- MENU ---------------- */
+
+.menuGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.menuItem{
+  min-height:150px;
+  border-radius:25px;
+  background:#f5dce3;
+  border:3px solid #e5a9b8;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transition:.2s;
+}
+
+.menuItem:hover{
+  transform:translateY(-6px) rotate(-1deg);
+  background:#f8cbd8;
+}
+
+.menuIcon{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+/* ---------------- LETTER ---------------- */
+
+.letter{
+  background:#fffdf5;
+  border:2px solid #e1c8a8;
+  padding:35px;
+  font-family:"Georgia",serif;
+  line-height:1.8;
+  font-size:18px;
+  box-shadow:5px 8px 0 #ead7bd;
+}
+
+/* ---------------- CHASE GAME ---------------- */
+
+.gameRoom{
+  height:450px;
+  position:relative;
+  overflow:hidden;
+  border-radius:25px;
+  background:
+    linear-gradient(#f6dce5 0 65%,#d6ad9b 65%);
+  border:4px solid #d89aaa;
+}
+
+.targetCat{
+  position:absolute;
+  width:110px;
+  height:120px;
+  cursor:pointer;
+  transition:.15s;
+}
+
+/* ---------------- FEED GAME ---------------- */
+
+.feedArea{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  min-height:300px;
+}
+
+.food{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background:#f1c1ce;
+  border:4px solid #bb7489;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  font-size:0;
+}
+
+.food:after{
+  content:"♥";
+  font-size:35px;
+  color:#b34e70;
+}
+
+.food:hover{transform:scale(1.1)}
+
+.feedCat{
+  transform:scale(.8);
+}
+
+/* ---------------- DRESSUP ---------------- */
+
+.dressArea{
+  display:flex;
+  justify-content:center;
+  min-height:430px;
+  position:relative;
+}
+
+.dressCat{
+  position:relative;
+  transform:scale(1.7);
+  margin-top:100px;
+}
+
+.outfitControls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+}
+
+.outfitControls button{
+  padding:12px 18px;
+  background:#efc1ce;
+  border-radius:20px;
+  color:#713f4c;
+}
+
+.accessory{
+  display:none;
+  position:absolute;
+  z-index:20;
+}
+
+.showAccessory{display:block}
+
+/* ---------------- HIDDEN KITTY ---------------- */
+
+.hideRoom{
+  height:450px;
+  position:relative;
+  border-radius:25px;
+  overflow:hidden;
+  background:
+    linear-gradient(#f6dce5 0 70%,#d2a997 70%);
+  border:4px solid #d89aaa;
+}
+
+.hideSpot{
+  position:absolute;
+  width:95px;
+  height:95px;
+  border-radius:20px;
+  background:#efd1c8;
+  border:4px solid #bd8790;
+  cursor:pointer;
+}
+
+.hideSpot:hover{
+  transform:scale(1.08);
+}
+
+.hiddenKitty{
+  display:none;
+  position:absolute;
+  width:100px;
+  height:110px;
+}
+
+/* ---------------- SECRET ROOM ---------------- */
+
+.secret{
+  background:
+    radial-gradient(circle at 50% 20%,#74384c,#241622 65%);
+  color:#fff0f3;
+  border:5px solid #b65d78;
+}
+
+.secret h2{color:#ffd6e0}
+
+.secretNote{
+  font-family:Georgia,serif;
+  line-height:1.9;
+  font-size:19px;
+  text-align:center;
+}
+
+.lock{
+  width:140px;
+  height:140px;
+  margin:20px auto;
+  border-radius:50%;
+  border:12px solid #d98ca1;
+  background:#351d2b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:50px;
+  cursor:pointer;
+  transition:.4s;
+}
+
+.lock:hover{transform:rotate(20deg) scale(1.05)}
+
+.secretInput{
+  display:block;
+  margin:20px auto;
+  padding:14px;
+  width:220px;
+  border-radius:20px;
+  border:2px solid #bd7188;
+  text-align:center;
+  outline:0;
+}
+
+/* ---------------- TOAST ---------------- */
+
+.toast{
+  position:absolute;
+  left:50%;
+  bottom:30px;
+  transform:translateX(-50%) translateY(100px);
+  z-index:500;
+  background:#fff8f5;
+  border:3px solid #d89aaa;
+  border-radius:30px;
+  padding:14px 25px;
+  opacity:0;
+  transition:.35s;
+  pointer-events:none;
+}
+
+.toast.show{
+  opacity:1;
+  transform:translateX(-50%) translateY(0);
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:800px){
+  .window{width:170px;height:150px}
+  .curtain{display:none}
+  .bed{left:-40px;transform:scale(.75);transform-origin:left bottom}
+  .vanity{right:-70px;transform:scale(.7);transform-origin:right bottom}
+  .shelf{right:-40px;transform:scale(.7);transform-origin:right top}
+  .k1{left:18%;bottom:23%}
+  .k2{left:43%;bottom:20%}
+  .k3{right:5%;bottom:24%}
+  .k4{display:none}
+  .rug{width:380px}
+  .menuGrid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:500px){
+  .title h1{font-size:25px}
+  .title p{font-size:12px}
+  .pawmenu{right:12px;top:18px;padding:8px 13px}
+  .menuGrid{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
 
-<nav>
- <div class="logo">For Ananta ♡</div>
- <div>
-  <a href="#kittens">Kittens</a>
-  <a href="#letters">Letters</a>
-  <a href="#games">Games</a>
-  <a href="#safe">Secret</a>
- </div>
-</nav>
+<div id="world">
 
-<!-- HERO -->
-<section class="hero">
-<div class="heroGrid">
+  <div class="wall"></div>
+  <div class="floor"></div>
+  <div class="ceiling"></div>
 
-<div>
- <div class="kicker">a tiny world made only for you</div>
- <div style="letter-spacing:3px;font-size:11px;color:#a15d72;font-weight:bold">
-  SEVEN MONTHS · 07 OCTOBER 2026
- </div>
+  <div class="title">
+    <h1>For Anu ♡</h1>
+    <p>seven months of us</p>
+  </div>
 
- <h1>Seven<br>Months<br>With You</h1>
+  <button class="pawmenu" onclick="openMenu()">open little house</button>
 
- <p>
- A little pink corner of the internet filled with kittens,
- tiny games, secret notes and a ridiculous amount of love.
- </p>
+  <!-- WINDOW -->
+  <div class="window">
+    <div class="moon"></div>
+    <div class="cloud"></div>
+  </div>
 
- <div class="actions">
-  <a class="btn" href="#kittens">Enter the kitten world</a>
-  <a class="btn alt" href="#games">Play something</a>
- </div>
+  <div class="curtain left"></div>
+  <div class="curtain right"></div>
+
+  <!-- BED -->
+  <div class="bed">
+    <div class="headboard"></div>
+    <div class="mattress"></div>
+    <div class="blanket"></div>
+    <div class="pillow"></div>
+  </div>
+
+  <!-- SHELF -->
+  <div class="shelf">
+    <div class="board"></div>
+    <div class="board"></div>
+    <div class="board"></div>
+    <div class="board"></div>
+
+    <div class="plant"></div>
+    <div class="book"></div>
+    <div class="book two"></div>
+    <div class="star-lamp"></div>
+  </div>
+
+  <!-- VANITY -->
+  <div class="vanity">
+    <div class="mirror"></div>
+    <div class="vtable"></div>
+    <div class="bottle one"></div>
+    <div class="bottle two"></div>
+    <div class="bottle three"></div>
+  </div>
+
+  <div class="rug"></div>
+
+  <!-- KITTEN 1 -->
+  <div class="kitten k1" onclick="catMessage(1)">
+    <div class="cat-body"></div>
+    <div class="tail"></div>
+    <div class="paw one"></div>
+    <div class="paw two"></div>
+    <div class="cat-head">
+      <div class="ear left"></div>
+      <div class="ear right"></div>
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+      <div class="blush left"></div>
+      <div class="blush right"></div>
+      <div class="bow"></div>
+    </div>
+  </div>
+
+  <!-- KITTEN 2 -->
+  <div class="kitten cat2 k2" onclick="catMessage(2)">
+    <div class="cat-body"></div>
+    <div class="tail"></div>
+    <div class="paw one"></div>
+    <div class="paw two"></div>
+    <div class="cat-head">
+      <div class="ear left"></div>
+      <div class="ear right"></div>
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+      <div class="blush left"></div>
+      <div class="blush right"></div>
+      <div class="crown"></div>
+    </div>
+  </div>
+
+  <!-- KITTEN 3 -->
+  <div class="kitten cat3 k3" onclick="catMessage(3)">
+    <div class="cat-body"></div>
+    <div class="tail"></div>
+    <div class="paw one"></div>
+    <div class="paw two"></div>
+    <div class="cat-head">
+      <div class="ear left"></div>
+      <div class="ear right"></div>
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+      <div class="blush left"></div>
+      <div class="blush right"></div>
+    </div>
+  </div>
+
+  <!-- KITTEN 4 -->
+  <div class="kitten cat4 k4" onclick="openSecret()">
+    <div class="cat-body"></div>
+    <div class="tail"></div>
+    <div class="paw one"></div>
+    <div class="paw two"></div>
+    <div class="cat-head">
+      <div class="ear left"></div>
+      <div class="ear right"></div>
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+      <div class="blush left"></div>
+      <div class="blush right"></div>
+    </div>
+  </div>
+
+  <div class="sign">ANU'S LITTLE HOUSE</div>
+
+  <!-- MAIN MENU -->
+  <div class="overlay" id="menu">
+    <div class="panel">
+      <button class="close" onclick="closeAll()">×</button>
+
+      <h2>Come inside, Anu</h2>
+      <p>
+        This little house has seven months hidden inside it.
+        Every corner has something for you.
+      </p>
+
+      <div class="menuGrid">
+
+        <button class="menuItem" onclick="openLetter()">
+          <div class="menuIcon">✉</div>
+          <b>A little letter</b>
+          <small>something from my heart</small>
+        </button>
+
+        <button class="menuItem" onclick="openChase()">
+          <div class="menuIcon">🐾</div>
+          <b>Catch the kitty</b>
+          <small>catch her seven times</small>
+        </button>
+
+        <button class="menuItem" onclick="openFeed()">
+          <div class="menuIcon">♡</div>
+          <b>Kitten café</b>
+          <small>feed the little babies</small>
+        </button>
+
+        <button class="menuItem" onclick="openDress()">
+          <div class="menuIcon">♢</div>
+          <b>Kitten closet</b>
+          <small>dress up your kitty</small>
+        </button>
+
+        <button class="menuItem" onclick="openHide()">
+          <div class="menuIcon">⌂</div>
+          <b>Where's the kitty?</b>
+          <small>find her hiding place</small>
+        </button>
+
+        <button class="menuItem" onclick="openSecret()">
+          <div class="menuIcon">◇</div>
+          <b>Secret room</b>
+          <small>only for Anu</small>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- LETTER -->
+  <div class="overlay" id="letter">
+    <div class="panel">
+      <button class="close" onclick="closeAll()">×</button>
+      <h2>A letter for you</h2>
+
+      <div class="letter">
+        <p>My Anu,</p>
+
+        <p>
+          Seven months sounds like just a number, but when I think about
+          everything that happened between us, it feels like a whole little
+          world that we built together.
+        </p>
+
+        <p>
+          You stayed beside me through my moods, my mistakes, my overthinking,
+          my good days and my bad ones. And somehow, even after seeing every
+          imperfect part of me, you still chose to stay.
+        </p>
+
+        <p>
+          I hope you always remember how special you are to me. I hope this
+          little house reminds you that there is always a tiny corner here
+          made especially for you.
+        </p>
+
+        <p>
+          Seven months done. And I still want to keep choosing you,
+          understanding you, annoying you, making you smile and being there
+          whenever you need me.
+        </p>
+
+        <p>
+          Happy seven months, Anu.
+          I love you more than this tiny website could ever explain.
+        </p>
+
+        <p style="text-align:right">
+          — yours, always ♡
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHASE -->
+  <div class="overlay" id="chase">
+    <div class="panel">
+      <button class="close" onclick="closeAll()">×</button>
+      <h2>Catch the runaway kitty</h2>
+      <p>She has exactly seven zoomies. Catch her before she escapes.</p>
+
+      <div class="gameRoom" id="chaseRoom">
+        <div class="targetCat" id="targetCat" onclick="catchCat()">
+          <div class="cat-body"></div>
+          <div class="tail"></div>
+          <div class="paw one"></div>
+          <div class="paw two"></div>
+          <div class="cat-head">
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="blush left"></div>
+            <div class="blush right"></div>
+            <div class="bow"></div>
+          </div>
+        </div>
+      </div>
+
+      <h3 id="score">0 / 7</h3>
+    </div>
+  </div>
+
+  <!-- FEED -->
+  <div class="overlay" id="feed">
+    <div class="panel">
+      <button class="close" onclick="closeAll()">×</button>
+      <h2>Kitten café</h2>
+      <p>Give the kitty some love. Every bowl gives her a different reaction.</p>
+
+      <div class="feedArea">
+
+        <div class="kitten feedCat">
+          <div class="cat-body"></div>
+          <div class="tail"></div>
+          <div class="paw one"></div>
+          <div class="paw two"></div>
+          <div class="cat-head">
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="blush left"></div>
+            <div class="blush right"></div>
+            <div class="bow"></div>
+          </div>
+        </div>
+
+        <button class="food" onclick="feedKitty('pink')"></button>
+        <button class="food" onclick="feedKitty('cream')"></button>
+        <button class="food" onclick="feedKitty('special')"></button>
+
+      </div>
+
+      <h3 id="feedText" style="text-align:center">
+        Choose something for her ♡
+      </h3>
+    </div>
+  </div>
+
+  <!-- DRESS UP -->
+  <div class="overlay" id="dress">
+    <div class="panel">
+      <button class="close" onclick="closeAll()">×</button>
+      <h2>Kitten closet</h2>
+
+      <div class="dressArea">
+
+        <div class="kitten dressCat" id="dressCat">
+          <div class="cat-body"></div>
+          <div class="tail"></div>
+          <div class="paw one"></div>
+          <div class="paw two"></div>
+          <div class="cat-head">
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="blush left"></div>
+            <div class="blush right"></div>
+
+            <div id="dressBow" class="accessory">
+              <div class="bow"></div>
+            </div>
+
+            <div id="dressCrown" class="accessory crown"></div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="outfitControls">
+        <button onclick="toggleAccessory('dressBow')">Pretty bow</button>
+        <button onclick="toggleAccessory('dressCrown')">Tiny crown</button>
+        <button onclick="dressCatPink()">Pink mode</button>
+        <button onclick="dressCatCream()">Cream mode</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HIDE -->
+  <div class="overlay" id="hide">
+    <div class="panel">
+      <button class="close" onclick="closeAll()">×</button>
+      <h2>Where is the kitty?</h2>
+      <p>She's hiding somewhere in this room. Click the objects.</p>
+
+      <div class="hideRoom" id="hideRoom">
+
+        <button class="hideSpot" style="left:8%;bottom:10%" onclick="checkSpot(1)">
+          bed
+        </button>
+
+        <button class="hideSpot" style="left:32%;top:12%" onclick="checkSpot(2)">
+          window
+        </button>
+
+        <button class="hideSpot" style="right:8%;top:15%" onclick="checkSpot(3)">
+          shelf
+        </button>
+
+        <button class="hideSpot" style="right:20%;bottom:10%" onclick="checkSpot(4)">
+          box
+        </button>
+
+        <button class="hideSpot" style="left:52%;bottom:8%" onclick="checkSpot(5)">
+          rug
+        </button>
+
+        <div class="hiddenKitty" id="hiddenKitty">
+          <div class="cat-body"></div>
+          <div class="tail"></div>
+          <div class="paw one"></div>
+          <div class="paw two"></div>
+          <div class="cat-head">
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="blush left"></div>
+            <div class="blush right"></div>
+            <div class="bow"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 id="hideText">Five hiding spots...</h3>
+    </div>
+  </div>
+
+  <!-- SECRET -->
+  <div class="overlay" id="secret">
+    <div class="panel secret">
+      <button class="close" onclick="closeAll()">×</button>
+
+      <h2 style="text-align:center">The tiny secret room</h2>
+
+      <div class="lock" onclick="unlockSecret()">◇</div>
+
+      <input
+        class="secretInput"
+        id="secretInput"
+        placeholder="tiny secret word"
+      >
+
+      <button
+        onclick="unlockSecret()"
+        style="
+        display:block;
+        margin:auto;
+        padding:12px 25px;
+        border-radius:25px;
+        background:#d7869e;
+        color:white">
+        unlock
+      </button>
+
+      <div id="secretContent" style="display:none">
+
+        <div class="secretNote">
+
+          <p>
+            You found it.
+          </p>
+
+          <p>
+            This room exists for one reason:
+            to remind you that no matter how big this website gets,
+            the most important part of it will always be you.
+          </p>
+
+          <p>
+            Seven months.
+            Countless conversations.
+            Silly moments.
+            Little fights.
+            Forgiveness.
+            Laughs.
+            And two people still choosing each other.
+          </p>
+
+          <p>
+            So here's your tiny secret:
+          </p>
+
+          <h2>
+            You are my favourite part of this whole little world.
+          </h2>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
 </div>
-
-<div class="heroKittenBox">
- <div class="kitten" id="heroCat"></div>
-</div>
-
-</div>
-</section>
-
-
-<!-- KITTENS -->
-<section class="garden" id="kittens">
-<div class="wrap">
-
-<div class="center">
- <div class="kicker">meet the residents</div>
- <h2>The Four Little Kittens</h2>
- <p>
- Each one has a completely different personality.
- Click them and see what they have to say.
- </p>
-</div>
-
-<div class="kittens">
-
-<div class="kcard" onclick="note('Mochi','Mochi is shy, but she has decided that Anu deserves the biggest hug in this entire kitten universe.')">
- <div class="kitten" data-cat="pink"></div>
- <h3>Mochi</h3>
- <small>the shy one</small>
-</div>
-
-<div class="kcard" onclick="note('Luna','Luna has officially declared Anu the princess of this website. She also stole the crown and refuses to give it back.')">
- <div class="kitten" data-cat="cream"></div>
- <h3>Luna</h3>
- <small>tiny princess</small>
-</div>
-
-<div class="kcard" onclick="note('Boba','Boba spends 87% of her day daydreaming and the other 13% wondering when Anu will come back.')">
- <div class="kitten" data-cat="lilac"></div>
- <h3>Boba</h3>
- <small>dreamy baby</small>
-</div>
-
-<div class="kcard" onclick="note('Pepper','Pepper has no responsibilities, no plan and absolutely no regrets. She is here exclusively to cause cute chaos.')">
- <div class="kitten" data-cat="orange"></div>
- <h3>Pepper</h3>
- <small>professional menace</small>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- CAT CAFE -->
-<section class="cafe">
-<div class="wrap">
-
-<div class="center">
- <div class="kicker">come inside</div>
- <h2>Anu's Little Cat Café</h2>
-</div>
-
-<div class="cafeScene">
- <div class="cafeWindow"></div>
- <div class="counter"></div>
-
- <div class="cafeKitty">
-  <div class="kitten" id="cafeCat"></div>
- </div>
-
- <div class="cafeText">one warm drink + one sleepy kitten ♡</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- LETTERS -->
-<section class="letters" id="letters">
-<div class="wrap">
-
-<div class="center">
- <div class="kicker">open whenever you need them</div>
- <h2>Little Letters</h2>
- <p>No memories section. Just things I want you to know.</p>
-</div>
-
-<div class="letterGrid">
-
-<div class="letter">
-<h3>When you overthink</h3>
-<p>
- You don't have to solve every thought tonight.
- Take a breath. One difficult moment doesn't erase
- everything beautiful.
-</p>
-<div class="hand">one thought at a time ♡</div>
-</div>
-
-<div class="letter">
-<h3>When you're tired</h3>
-<p>
- You are allowed to stop for a while.
- You don't have to be strong every second.
- Resting is not falling behind.
-</p>
-<div class="hand">soft days count too</div>
-</div>
-
-<div class="letter">
-<h3>When you need a smile</h3>
-<p>
- Four kittens have held a serious meeting about you.
- Their official conclusion: you are adorable.
- Meeting dismissed.
-</p>
-<div class="hand">case closed.</div>
-</div>
-
-<div class="letter">
-<h3>Seven months</h3>
-<p>
- Seven months of choosing, learning, laughing,
- misunderstanding, fixing things and still caring.
- And this little world is only one tiny way of saying it.
-</p>
-<div class="hand">still here. still us.</div>
-</div>
-
-<div class="letter">
-<h3>Ordinary days</h3>
-<p>
- It doesn't need to be a special date for you to
- deserve pretty words. Ordinary days deserve softness too.
-</p>
-<div class="hand">especially ordinary days</div>
-</div>
-
-<div class="letter">
-<h3>One promise</h3>
-<p>
- I'll keep trying to make this little corner feel
- like somewhere you can return to whenever you want
- something soft and happy.
-</p>
-<div class="hand">worth the effort.</div>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- GAMES -->
-<section class="arcade" id="games">
-<div class="wrap">
-
-<div class="center">
- <div class="kicker">okay enough reading</div>
- <h2>Kitten Arcade</h2>
- <p>These are actual little games now. Good luck.</p>
-</div>
-
-<div class="gameGrid">
-
-<!-- RUNAWAY -->
-<div class="game">
-<h3>Catch The Runaway Kitty</h3>
-<p class="gameDesc">
- She knows she's not supposed to run. She doesn't care.
- Catch her 7 times.
-</p>
-
-<div class="runArea" id="runArea">
- <div class="runningKitty" id="runner"></div>
-</div>
-
-<div class="score">
- Catches: <span id="runScore">0</span> / 7
-</div>
-
-<button class="btn" style="margin-top:12px" onclick="startRunner()">
- Start
-</button>
-</div>
-
-
-<!-- FEED -->
-<div class="game">
-<h3>Feed The Kitty</h3>
-<p class="gameDesc">
- She's hungry. Pick the food she likes.
- Don't disappoint her.
-</p>
-
-<div class="feedScene">
- <div class="kitten" id="feedCat"></div>
-</div>
-
-<div class="foods">
- <button class="food" onclick="feed('fish')">🐟</button>
- <button class="food" onclick="feed('cake')">🍰</button>
- <button class="food" onclick="feed('milk')">🥛</button>
- <button class="food" onclick="feed('flower')">🌷</button>
-</div>
-
-<div id="feedText" style="text-align:center;font-weight:bold;color:#9d506b;margin-top:10px">
- Choose carefully...
-</div>
-</div>
-
-
-<!-- DRESS -->
-<div class="game">
-<h3>Dress Up Luna</h3>
-<p class="gameDesc">
- Give the princess a new accessory.
- Click different ones and watch her outfit change.
-</p>
-
-<div class="dressScene">
- <div class="kitten" id="dressCat"></div>
-</div>
-
-<div class="accessories">
- <button onclick="dress('crown')">♛ Crown</button>
- <button onclick="dress('bow')">♡ Bow</button>
- <button onclick="dress('flower')">✿ Flower</button>
- <button onclick="dress('none')">Remove</button>
-</div>
-
-<div id="dressText" style="text-align:center;font:20px Caveat;color:#ad5b73;margin-top:8px">
- Princess is waiting...
-</div>
-</div>
-
-
-<!-- HIDE AND SEEK -->
-<div class="game">
-<h3>Find The Sneaky Kitty</h3>
-<p class="gameDesc">
- She is hiding somewhere inside this room.
- Find her before she moves again.
-</p>
-
-<div class="hideScene" id="hideScene">
- <div class="hideBox" id="box1"></div>
- <div class="hideKitty" id="hiddenCat"></div>
-</div>
-
-<button class="btn" style="margin-top:12px" onclick="hideKitty()">
- Hide her
-</button>
-<div id="hideText" style="margin-top:10px;color:#9d506b;font-weight:bold">
- She's hiding...
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- PRIVATE SAFE -->
-<section class="safeSection" id="safe">
-<div class="wrap">
-
-<div class="center">
- <div class="kicker" style="color:#e7aabd">for your eyes only</div>
- <h2>Secret Kitten Room</h2>
- <p style="color:#e4cbd3">
- A playful hidden vault inside the page.
- </p>
-</div>
-
-<div class="safeBox">
-
-<input id="pin" class="pin" maxlength="6"
-placeholder="••••••" inputmode="numeric">
-
-<div class="keypad">
-<button onclick="num(1)">1</button>
-<button onclick="num(2)">2</button>
-<button onclick="num(3)">3</button>
-<button onclick="num(4)">4</button>
-<button onclick="num(5)">5</button>
-<button onclick="num(6)">6</button>
-<button onclick="num(7)">7</button>
-<button onclick="num(8)">8</button>
-<button onclick="num(9)">9</button>
-<button onclick="clearPin()">C</button>
-<button onclick="num(0)">0</button>
-<button onclick="unlock()">OPEN</button>
-</div>
-
-<div class="secret" id="secret">
-
-<div style="text-align:center">
- <div class="kitten" id="secretCat" style="margin:auto"></div>
-</div>
-
-<h3 style="font-size:45px;margin:0">
- You found the secret.
-</h3>
-
-<p>
- Okay Anu, this part is just for you.
-</p>
-
-<p>
- Seven months later, there is still a little corner of
- my world that feels warmer simply because you are in it.
- There have been easy days, difficult days, silly days,
- quiet days and everything between them.
-</p>
-
-<p>
- And through all of that, one thing remains:
- <b>you matter to me, us matters to me, and I want to keep
- choosing the little things that make us smile.</b>
-</p>
-
-<div class="hand">
- The secret kitten has been bribed into keeping this safe.
- </div>
-
-</div>
-</div>
-</div>
-</section>
-
-
-<!-- END -->
-<section class="end">
-<div>
- <div class="kicker">one last thing</div>
- <h2>Happy Seven<br>Months, Anu ♡</h2>
- <p>
- Seven months down. More laughs, more tiny worlds,
- more silly moments and more reasons to smile.
- I hope this little place always feels like yours.
- </p>
- <br>
- <div class="hand" style="font-size:30px">
- made especially for you.
- </div>
-</div>
-</section>
-
-
-<div class="modal" id="modal">
-<div class="modalBox">
-<button class="close" onclick="closeNote()">×</button>
-<div class="kitten" id="modalCat" style="margin:auto;width:140px;height:160px"></div>
-<h2 id="modalTitle" style="font-size:50px"></h2>
-<p id="modalText"></p>
-<button class="btn" onclick="closeNote()">keep this ♡</button>
-</div>
-</div>
-
-<div class="toast" id="toast"></div>
-
 
 <script>
 
-/* =========================================================
-   PROPER ILLUSTRATED KITTEN
-========================================================= */
+/* ---------------- BASIC ---------------- */
 
-function kittySVG(color="#f4cbd6",dress="#c86d87",ear="#efb3c3"){
-return `
-<svg viewBox="0 0 260 300">
-
-<ellipse cx="130" cy="278" rx="70" ry="10"
- fill="#6b3b481f"/>
-
-<!-- tail -->
-<path d="M66 220 Q20 235 38 180"
- fill="none" stroke="${color}" stroke-width="23"
- stroke-linecap="round"/>
-
-<!-- ears -->
-<path d="M67 105 L76 30 L118 75
-Q130 70 142 75 L184 30 L193 105"
- fill="${color}" stroke="#613d47" stroke-width="5"
- stroke-linejoin="round"/>
-
-<path d="M78 70 L84 50 L104 78
-M182 70 L176 50 L156 78"
- fill="${ear}" stroke="#613d47" stroke-width="3"/>
-
-<!-- head -->
-<ellipse cx="130" cy="145" rx="82" ry="72"
- fill="${color}" stroke="#613d47" stroke-width="5"/>
-
-<!-- hair tuft -->
-<path d="M108 78 Q130 52 152 78"
- fill="none" stroke="#613d47" stroke-width="7"
- stroke-linecap="round"/>
-
-<!-- eyes -->
-<ellipse cx="100" cy="143" rx="17" ry="25" fill="#49303b"/>
-<ellipse cx="160" cy="143" rx="17" ry="25" fill="#49303b"/>
-
-<ellipse cx="105" cy="135" rx="6" ry="9" fill="white"/>
-<ellipse cx="165" cy="135" rx="6" ry="9" fill="white"/>
-
-<circle cx="96" cy="154" r="3" fill="#e98ca4"/>
-<circle cx="164" cy="154" r="3" fill="#e98ca4"/>
-
-<!-- nose + smile -->
-<path d="M123 164 Q130 157 137 164
-Q130 174 123 164"
- fill="#a94f6a"/>
-
-<path d="M130 170 Q121 182 110 175
-M130 170 Q139 182 150 175"
- fill="none" stroke="#613d47"
- stroke-width="3" stroke-linecap="round"/>
-
-<!-- whiskers -->
-<path d="M75 157 L32 149
-M75 169 L29 173
-M185 157 L228 149
-M185 169 L231 173"
- stroke="#613d47" stroke-width="2"
- stroke-linecap="round"/>
-
-<!-- body/dress -->
-<ellipse cx="130" cy="225" rx="65" ry="49"
- fill="${dress}" stroke="#613d47" stroke-width="5"/>
-
-<!-- collar -->
-<path d="M70 208 Q130 235 190 208"
- fill="none" stroke="#fff" stroke-width="8"/>
-
-<!-- bow -->
-<path d="M130 194
-L106 176 L94 195 L113 211 Z
-M130 194
-L154 176 L166 195 L147 211 Z"
- fill="#fff" stroke="#613d47" stroke-width="3"/>
-
-<circle cx="130" cy="194" r="8"
- fill="${dress}" stroke="#613d47" stroke-width="3"/>
-
-<!-- paws -->
-<ellipse cx="88" cy="246" rx="19" ry="12" fill="${color}"/>
-<ellipse cx="172" cy="246" rx="19" ry="12" fill="${color}"/>
-
-</svg>`;
+function closeAll(){
+  document.querySelectorAll(".overlay").forEach(x=>x.classList.remove("show"));
 }
 
-function setKitten(id,color,dress,ear){
- document.getElementById(id).innerHTML=kittySVG(color,dress,ear);
+function show(id){
+  closeAll();
+  document.getElementById(id).classList.add("show");
 }
 
-setKitten("heroCat","#f5cbd7","#bd607c","#e9aebe");
-setKitten("cafeCat","#f2d8bf","#a65d68","#e7bea1");
-setKitten("feedCat","#f5cbd7","#b85e79","#e8aebe");
-setKitten("dressCat","#eee0c8","#ad6574","#dfc1a4");
-setKitten("secretCat","#ded0e9","#8c668f","#c6b4d9");
+function openMenu(){show("menu")}
+function openLetter(){show("letter")}
+function openChase(){
+  show("chase");
+  resetChase();
+}
+function openFeed(){show("feed")}
+function openDress(){show("dress")}
+function openHide(){
+  show("hide");
+  resetHide();
+}
+function openSecret(){show("secret")}
 
-document.querySelectorAll("[data-cat]").forEach(x=>{
- let type=x.dataset.cat;
- let c={
-  pink:["#f5cbd7","#bd607c","#e9aebe"],
-  cream:["#f2dfc8","#ae6670","#e5c2a5"],
-  lilac:["#ded0e9","#8d6a98","#c4b1d7"],
-  orange:["#efb673","#9c5d4e","#dc9551"]
- }[type];
- x.innerHTML=kittySVG(...c);
-});
+/* ---------------- KITTEN MESSAGES ---------------- */
 
+const messages={
+  1:"Mochi says: Anu deserves unlimited forehead kisses and zero sadness.",
+  2:"Princess kitty says: seven months and you're still her favourite human.",
+  3:"Sleepy kitty says: don't overthink today. It's celebration time.",
+};
 
-/* =========================================================
-   NOTES
-========================================================= */
-
-function note(title,text){
- document.getElementById("modalTitle").textContent=title;
- document.getElementById("modalText").textContent=text;
- document.getElementById("modal").classList.add("show");
+function catMessage(n){
+  toast(messages[n]);
 }
 
-function closeNote(){
- document.getElementById("modal").classList.remove("show");
+function toast(t){
+  const x=document.getElementById("toast");
+  x.textContent=t;
+  x.classList.add("show");
+
+  setTimeout(()=>{
+    x.classList.remove("show");
+  },2800);
 }
 
+/* ---------------- CHASE GAME ---------------- */
 
-/* =========================================================
-   RUNAWAY KITTY GAME
-========================================================= */
+let chaseScore=0;
 
-let runnerScore=0;
-let runnerStarted=false;
-
-function startRunner(){
- runnerScore=0;
- runnerStarted=true;
- document.getElementById("runScore").textContent="0";
- moveRunner();
+function resetChase(){
+  chaseScore=0;
+  document.getElementById("score").textContent="0 / 7";
+  moveTarget();
 }
 
-function moveRunner(){
+function moveTarget(){
 
- if(!runnerStarted)return;
+  const room=document.getElementById("chaseRoom");
+  const cat=document.getElementById("targetCat");
 
- let area=document.getElementById("runArea");
- let cat=document.getElementById("runner");
+  const maxX=room.clientWidth-120;
+  const maxY=room.clientHeight-130;
 
- cat.innerHTML=kittySVG("#f5cbd7","#bd607c","#e9aebe");
+  cat.style.left=Math.random()*maxX+"px";
+  cat.style.top=Math.random()*maxY+"px";
+}
 
- let x=Math.random()*(area.clientWidth-120);
- let y=Math.random()*(area.clientHeight-135);
+function catchCat(){
 
- cat.style.left=x+"px";
- cat.style.top=y+"px";
+  chaseScore++;
 
- cat.onclick=function(){
+  document.getElementById("score").textContent=
+    chaseScore+" / 7";
 
-  runnerScore++;
-  document.getElementById("runScore").textContent=runnerScore;
+  if(chaseScore>=7){
 
-  cat.classList.add("jump");
-  setTimeout(()=>cat.classList.remove("jump"),450);
+    toast("You caught her! Seven months unlocked ♡");
 
-  if(runnerScore>=7){
-   runnerStarted=false;
-   toast("YOU CAUGHT THE KITTY ♡");
-   cat.style.left="50%";
-   cat.style.top="45%";
-   return;
+    setTimeout(()=>{
+      document.getElementById("score").textContent=
+        "YOU WIN — she belongs back in Anu's little house ♡";
+    },500);
+
+    return;
   }
 
-  setTimeout(moveRunner,300);
- }
+  moveTarget();
 }
 
+/* ---------------- FEED ---------------- */
 
-/* =========================================================
-   FEED GAME
-========================================================= */
+function feedKitty(type){
 
-function feed(food){
+  const text=document.getElementById("feedText");
 
- let cat=document.getElementById("feedCat");
- let text=document.getElementById("feedText");
-
- if(food==="milk"){
-  text.textContent="PURRFECT. She is now extremely happy. ♡";
-  cat.classList.add("happy");
-  toast("Kitten approved the milk.");
-  setTimeout(()=>cat.classList.remove("happy"),500);
- }
- else{
-  text.textContent="She stared at you... then looked away dramatically.";
-  toast("Wrong food 😭");
- }
-}
-
-
-/* =========================================================
-   DRESS UP
-========================================================= */
-
-function dress(item){
-
- let cat=document.getElementById("dressCat");
- let text=document.getElementById("dressText");
-
- if(item==="crown"){
-  cat.innerHTML=kittySVG("#eee0c8","#b46a78","#dfc1a4")
-   .replace("</svg>",
-   `<path d="M98 91 L108 65 L130 83 L152 65 L162 91 Z"
-   fill="#e5bd62" stroke="#704b38" stroke-width="4"/>
-   </svg>`);
-  text.textContent="Princess Luna has entered the royal era.";
- }
-
- if(item==="bow"){
-  cat.innerHTML=kittySVG("#eee0c8","#bd607c","#dfc1a4");
-  text.textContent="Very elegant. Very Anu-coded.";
- }
-
- if(item==="flower"){
-  cat.innerHTML=kittySVG("#eee0c8","#9b709d","#dfc1a4")
-   .replace("</svg>",
-   `<circle cx="130" cy="55" r="12" fill="#ef9ab1"/>
-    <circle cx="118" cy="55" r="10" fill="#efb4c5"/>
-    <circle cx="142" cy="55" r="10" fill="#efb4c5"/>
-    <circle cx="130" cy="55" r="6" fill="#e8c86b"/>
-    </svg>`);
-  text.textContent="Flower princess unlocked.";
- }
-
- if(item==="none"){
-  cat.innerHTML=kittySVG("#eee0c8","#ad6574","#dfc1a4");
-  text.textContent="Back to classic Luna.";
- }
-}
-
-
-/* =========================================================
-   HIDE AND SEEK
-========================================================= */
-
-function hideKitty(){
-
- let scene=document.getElementById("hideScene");
- let box=document.getElementById("box1");
- let cat=document.getElementById("hiddenCat");
-
- box.style.left=Math.random()*(scene.clientWidth-75)+"px";
- box.style.top=Math.random()*(scene.clientHeight-75)+"px";
-
- cat.innerHTML=kittySVG("#f4cbd6","#bd607c","#e9aebe");
-
- cat.style.left=Math.random()*(scene.clientWidth-100)+"px";
- cat.style.top=Math.random()*(scene.clientHeight-120)+"px";
-
- cat.style.display="none";
-
- box.onclick=function(){
-   box.style.display="none";
-   cat.style.display="block";
-   document.getElementById("hideText").textContent="FOUND HER! ♡";
- };
-
- setTimeout(()=>{
-  if(box.style.display!=="none"){
-   cat.style.display="block";
-   document.getElementById("hideText").textContent="She peeked out!";
+  if(type==="pink"){
+    text.textContent="She ate the pink treat and immediately asked for another.";
   }
- },1800);
+
+  if(type==="cream"){
+    text.textContent="She is now sitting there pretending she wasn't hungry.";
+  }
+
+  if(type==="special"){
+    text.textContent="SPECIAL TREAT! Kitty is officially the happiest baby.";
+  }
 }
 
-hideKitty();
+/* ---------------- DRESSUP ---------------- */
 
+function toggleAccessory(id){
 
-/* =========================================================
-   PRIVATE SAFE
-========================================================= */
+  const x=document.getElementById(id);
 
-function num(n){
- let p=document.getElementById("pin");
- if(p.value.length<6)p.value+=n;
+  x.classList.toggle("showAccessory");
 }
 
-function clearPin(){
- document.getElementById("pin").value="";
+function dressCatPink(){
+
+  document.querySelector("#dressCat .cat-head").style.background="#f3c3d0";
+  document.querySelector("#dressCat .cat-body").style.background="#f3c3d0";
 }
 
-function unlock(){
+function dressCatCream(){
 
- let p=document.getElementById("pin").value;
-
- if(p==="070326"){
-  document.getElementById("secret").classList.add("show");
-  toast("Secret room unlocked ♡");
-  document.getElementById("secret").scrollIntoView({
-   behavior:"smooth",block:"center"
-  });
- }
- else{
-  toast("Wrong code... tiny kitten says nope.");
-  clearPin();
- }
+  document.querySelector("#dressCat .cat-head").style.background="#f1e4d2";
+  document.querySelector("#dressCat .cat-body").style.background="#f1e4d2";
 }
 
+/* ---------------- HIDE & SEEK ---------------- */
 
-/* =========================================================
-   TOAST
-========================================================= */
+let hidingSpot=0;
 
-function toast(text){
- let t=document.getElementById("toast");
- t.textContent=text;
- t.classList.add("show");
- setTimeout(()=>t.classList.remove("show"),2300);
+function resetHide(){
+
+  hidingSpot=Math.floor(Math.random()*5)+1;
+
+  const kitty=document.getElementById("hiddenKitty");
+
+  kitty.style.display="none";
+
+  document.getElementById("hideText").textContent=
+    "Five hiding spots...";
+
+  const positions=[
+    ["8%","12%"],
+    ["40%","12%"],
+    ["70%","15%"],
+    ["75%","65%"],
+    ["45%","70%"]
+  ];
+
+  kitty.style.left=positions[hidingSpot-1][0];
+  kitty.style.top=positions[hidingSpot-1][1];
 }
+
+function checkSpot(n){
+
+  if(n===hidingSpot){
+
+    document.getElementById("hiddenKitty").style.display="block";
+
+    document.getElementById("hideText").textContent=
+      "FOUND HER! She was waiting for you ♡";
+
+  }else{
+
+    const lines=[
+      "No kitty here.",
+      "Only dust bunnies.",
+      "Wrong spot.",
+      "She is definitely not here.",
+      "Try another hiding place."
+    ];
+
+    document.getElementById("hideText").textContent=
+      lines[Math.floor(Math.random()*lines.length)];
+  }
+}
+
+/* ---------------- SECRET ---------------- */
+
+function unlockSecret(){
+
+  const value=
+    document.getElementById("secretInput").value
+      .trim()
+      .toLowerCase();
+
+  /*
+    Change this word if you want.
+    Current secret word:
+    anuuu
+  */
+
+  if(value==="anuuu" || value==="anu" || value==="7"){
+
+    document.getElementById("secretContent").style.display="block";
+
+    document.querySelector(".lock").style.transform=
+      "rotate(360deg) scale(1.1)";
+
+  }else{
+
+    toast("The little lock says: nope, try again.");
+  }
+}
+
+/* ---------------- AMBIENT CAT MOVEMENT ---------------- */
+
+setInterval(()=>{
+
+  const cats=document.querySelectorAll(".k1,.k2,.k3");
+
+  const random=
+    cats[Math.floor(Math.random()*cats.length)];
+
+  random.style.transform=
+    "translateY(-15px) rotate("+
+    (Math.random()*8-4)+"deg)";
+
+  setTimeout(()=>{
+    random.style.transform="";
+  },500);
+
+},3500);
 
 </script>
 
